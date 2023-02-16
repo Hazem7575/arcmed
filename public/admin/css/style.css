@@ -1,0 +1,30 @@
+.select2-container--bootstrap5 .select2-dropdown .select2-results__option.select2-results__option--selected:after {
+    left: 1.25rem !important;
+    right: auto !important;
+}
+table th , table td {
+    text-align: center !important;
+}
+
+.fileuploader-input .fileuploader-input-caption , .fileuploader-input-button {
+    border-radius: 0 !important;
+}
+.fileuploader-popup {
+    direction: ltr !important;
+}
+.fileuploader-popup .fileuploader-popup-header .fileuploader-popup-meta h5 {
+    color: #fff !important;
+}
+.box-header .box-title, .box-header>.fa, .box-header>.glyphicon, .box-header>.ion {
+    margin-right: 0;
+}
+.fileuploader-input .fileuploader-input-caption {
+    margin-right: 0 !important;
+}
+.fileuploader {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.fileuploader-input .fileuploader-input-button, .fileuploader-popup .fileuploader-popup-header .fileuploader-popup-button.button-success {
+    background: #5e5e68;
+}

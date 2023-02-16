@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.st-content {
+    background: #fff !important;
+}
+:root {
+    --color-green : #19CE67
+}

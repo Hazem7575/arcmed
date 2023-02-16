@@ -1,0 +1,56 @@
+.st-slider , .st-top-header-in {
+    direction: ltr;
+}
+body {
+    font-family: "Droid Arabic Kufi" , sans-serif;
+}
+.st-nav .st-nav-list > li {
+    margin-left: 20px;
+    margin-right : auto;
+    font-family: "Droid Arabic Kufi" , sans-serif;
+}
+.st-top-header {
+    background: #30a5ff;
+}
+.st-top-header-list li , .st-top-header-list li a:hover {
+    color: #fff;
+}
+.st-top-header-list svg {
+    fill: #fff;
+}
+.st-top-header-btn:hover , .st-top-header-btn {
+    color: #fdf6f6;
+}
+
+
+.st-section-heading.st-style1 .st-section-heading-title , .st-section-heading-subtitle , .st-hero-text {
+    font-family: "Droid Arabic Kufi";
+}
+.st-vertical-middle-in , .st-shedule-title , .st-shedule-left , .st-call-title  {
+    text-align: right;
+    font-family: "Droid Arabic Kufi";
+}
+.st-call.st-style1 .st-call-icon {
+    margin-left: 15px;
+}
+.swiper-slide.swiper-slide-active .st-testimonial.st-style1 , .st-funfact-title , .st-main-footer ,.st-iconbox-title {
+    font-family: "Droid Arabic Kufi" , sans-serif;
+}
+.swiper-slide {
+    float: right;
+}
+.st-footer-widget-title:before {
+    left: auto;
+    right: 0;
+}
+.st-footer-widget-nav i {
+    right: 0;
+    left: auto;
+}
+.st-footer-widget-nav a {
+    padding-left: 0;
+    padding-right: 15px;
+}
+.st-avatar-info {
+    margin-right: 15px;
+}
