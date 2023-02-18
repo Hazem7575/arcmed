@@ -24,7 +24,6 @@
     </head>
     <body class="font-sans antialiased">
         @inertia
-
         <script>
             let LinkUrl = '{{asset('/')}}';
         </script>

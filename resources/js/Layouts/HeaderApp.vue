@@ -26,13 +26,14 @@
                     <div class="st-main-header-right">
                         <div class="st-nav">
                             <ul class="st-nav-list st-onepage-nav">
-                                <li><a href="#home" class="st-smooth-move">{{__('Navbar.Home')}}</a></li>
-                                <li><a href="#about" class="st-smooth-move">{{__('Navbar.About')}}</a></li>
+                                <li><Link :href="route('index')" class="st-smooth-move">{{__('Navbar.Home')}}</Link></li>
+                                <li><Link :href="route('about')" class="st-smooth-move">{{__('Navbar.About')}}</Link></li>
                                 <li><a href="#department" class="st-smooth-move">{{__('Navbar.department')}}</a></li>
                                 <li><a href="#doctors" class="st-smooth-move">{{__('Navbar.Doctors')}}</a></li>
                                 <li><a href="#gallery" class="st-smooth-move">{{__('Navbar.Gallery')}}</a></li>
                                 <li><a href="#contact" class="st-smooth-move">{{__('Navbar.Contact Us')}}</a></li>
                             </ul>
+                            <span class="st-munu-toggle"><span></span></span>
                         </div>
                     </div>
                 </div>
@@ -42,8 +43,17 @@
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
-    name: "HeaderApp"
+    name: "HeaderApp",
+    mounted() {
+        $('.st-munu-toggle').on('click', function () {
+            $(this).toggleClass("st-toggle-active").siblings('.st-nav-list').slideToggle();;
+        });
+        $('.st-munu-dropdown-toggle').on('click', function () {
+            $(this).toggleClass('active').siblings('ul').slideToggle();
+        });
+    }
 }
 </script>
 

@@ -240,9 +240,7 @@
                     </div>
                 </div>
             </section>
-            <!-- End About Seciton -->
 
-            <!-- Start Before After -->
             <section class="st-before-after-section st-dynamic-bg st-bg" style="background-image: url('/assets/img/before-after-bg.jpg')">
                 <div class="st-height-b120 st-height-lg-b80"></div>
                 <div class="container">
@@ -513,11 +511,10 @@
                                     <span class="st-video-animaiton"><span></span></span>
                                 </a>
                             </div>
-                        </div><!-- .col -->
+                        </div>
                     </div>
                 </div>
             </section>
-
             <div class="st-google-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd" allowfullscreen></iframe>
             </div>
@@ -560,6 +557,69 @@ export default {
             $('html').removeClass('overflow-hidden');
             $('.st-video-popup-container iframe').attr('src', 'about:blank')
             e.preventDefault();
+        });
+        $('.st-before-after').each(function () {
+            var $container = $(this),
+                $before = $container.find('.st-before'),
+                $after = $container.find('.st-after'),
+                $handle = $container.find('.st-handle-before-after');
+
+            var maxX = $container.outerWidth(),
+                offsetX = $container.offset().left,
+                startX = 0;
+
+            var touchstart, touchmove, touchend;
+            var mousemove = function (e) {
+                e.preventDefault();
+                var curX = e.clientX - offsetX,
+                    diff = startX - curX,
+                    curPos = (curX / maxX) * 100;
+                if (curPos > 100) {
+                    curPos = 100;
+                }
+                if (curPos < 0) {
+                    curPos = 0;
+                }
+                $before.css({ right: (100 - curPos) + "%" });
+                $handle.css({ left: curPos + "%" });
+            };
+            var mouseup = function (e) {
+                e.preventDefault();
+                if (supportsTouch) {
+                    $(document).off('touchmove', touchmove);
+                    $(document).off('touchend', touchend);
+                } else {
+                    $(document).off('mousemove', mousemove);
+                    $(document).off('mouseup', mouseup);
+                }
+            };
+            var mousedown = function (e) {
+                e.preventDefault();
+                startX = e.clientX - offsetX;
+                if (supportsTouch) {
+                    $(document).on('touchmove', touchmove);
+                    $(document).on('touchend', touchend);
+                } else {
+                    $(document).on('mousemove', mousemove);
+                    $(document).on('mouseup', mouseup);
+                }
+            };
+
+            touchstart = function (e) {
+                console.log(e);
+                mousedown({ preventDefault: e.preventDefault, clientX: e.originalEvent.changedTouches[0].pageX });
+            };
+            touchmove = function (e) {
+                mousemove({ preventDefault: e.preventDefault, clientX: e.originalEvent.changedTouches[0].pageX });
+            };
+            touchend = function (e) {
+                mouseup({ preventDefault: e.preventDefault, clientX: e.originalEvent.changedTouches[0].pageX });
+            };
+            if (supportsTouch) {
+                $handle.on('touchstart', touchstart);
+            } else {
+                $handle.on('mousedown', mousedown);
+            }
         });
     }
 }

@@ -126,12 +126,7 @@
   function mobileMenu() {
     $('.st-nav').append('<span class="st-munu-toggle"><span></span></span>');
     $('.menu-item-has-children').append('<span class="st-munu-dropdown-toggle"></span>');
-    $('.st-munu-toggle').on('click', function () {
-      $(this).toggleClass("st-toggle-active").siblings('.st-nav-list').slideToggle();;
-    });
-    $('.st-munu-dropdown-toggle').on('click', function () {
-      $(this).toggleClass('active').siblings('ul').slideToggle();
-    });
+
     // $('.st-smooth-move').on('click', function() {
     //   $('.st-onepage-nav').slideUp();
     //   $('.st-munu-toggle').removeClass('st-toggle-active');

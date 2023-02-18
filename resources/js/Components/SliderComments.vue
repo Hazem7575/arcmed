@@ -1,6 +1,5 @@
 <template>
     <swiper
-
         :speed="800"
         :autoplay='{
             "delay" : 5000,
@@ -12,6 +11,7 @@
         :centeredSlides="true"
         :roundLengths="true"
         :loop="true"
+        :breakpoints="swiperOptions.breakpoints"
         :loopAdditionalSlides="30"
         :space-between="10"
         :modules="modules"
@@ -53,8 +53,29 @@ export default {
     setup() {
         return {
             EffectFade,
-            modules: [Pagination, Navigation , Autoplay]
+            modules: [Pagination, Navigation, Autoplay]
         };
+    },
+    data() {
+        return {
+            swiperOptions: {
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    },
+                    770: {
+                        slidesPerView: 2,
+                        spaceBetween: 50
+                    },
+
+                    771: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    }
+                }
+            }
+        }
     }
 }
 </script>

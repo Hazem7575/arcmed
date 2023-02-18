@@ -5,9 +5,22 @@
             <div class="slick-wrapper">
                     <swiper
                         :slides-per-view="1"
+                        :speed="1000"
                         :space-between="50"
                         @swiper="onSwiper"
                         @slideChange="onSlideChange"
+                        :loopAdditionalSlides="30"
+                        :navigation="true"
+                        :centeredSlides="true"
+                        :roundLengths="true"
+
+                        :loop="true"
+                        :autoplay='{
+                            "delay" : 10000,
+                            "speed" : 1000,
+                            "disableOnInteraction": false
+                        }'
+                        :modules="modules"
                     >
                         <swiper-slide v-for="slide in sliders">
                             <div class="slick-slide-in">
@@ -39,6 +52,13 @@
 <script>
 import $ from 'jquery'
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Pagination, Navigation , Autoplay } from 'swiper';
+import { EffectFade } from 'swiper';
+
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import 'swiper/css';
 export default {
@@ -62,6 +82,8 @@ export default {
         return {
             onSwiper,
             onSlideChange,
+            EffectFade,
+            modules: [Pagination, Navigation, Autoplay]
         };
     }
 }

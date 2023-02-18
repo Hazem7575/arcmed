@@ -33,7 +33,17 @@ body {
 .st-call.st-style1 .st-call-icon {
     margin-left: 15px;
 }
-.swiper-slide.swiper-slide-active .st-testimonial.st-style1 , .st-funfact-title , .st-main-footer ,.st-iconbox-title {
+.swiper-slide.swiper-slide-active .st-testimonial.st-style1 ,
+.st-hero-subtitle,
+.st-funfact-title ,
+.st-main-footer ,
+.st-iconbox-title,
+.about-content span,
+.about-content h2,
+.about-content p,
+.about-content ul li,
+.content-body-text
+{
     font-family: "Droid Arabic Kufi" , sans-serif;
 }
 .swiper-slide {
@@ -53,4 +63,7 @@ body {
 }
 .st-avatar-info {
     margin-right: 15px;
+}
+.content-body-text {
+    text-align: right;
 }

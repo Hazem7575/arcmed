@@ -8,3 +8,20 @@
 :root {
     --color-green : #19CE67
 }
+
+.color-web {
+    color: var(--color-green);
+}
+.pages-content {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+@media screen and (max-width: 700px) {
+    .st-after , .st-before {
+        background-size: cover;
+
+    }
+    .st-video-block {
+        margin-bottom: 17px;
+    }
+}

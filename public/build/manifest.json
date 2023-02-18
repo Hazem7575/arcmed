@@ -1,37 +1,59 @@
 {
+  "_navigation.min-3804c9d4.js": {
+    "css": [
+      "assets/navigation-ae18723a.css"
+    ],
+    "file": "assets/navigation.min-3804c9d4.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "navigation.css": {
+    "file": "assets/navigation-ae18723a.css",
+    "src": "navigation.css"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-590584fb.css",
-    "isEntry": true,
-    "src": "resources/css/app.css"
+    "file": "assets/app-d1f4dc5c.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/Pages/About.vue": {
+    "file": "assets/About-49218fd6.js",
+    "imports": [
+      "_navigation.min-3804c9d4.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/About.vue"
   },
   "resources/js/Pages/Welcome.css": {
-    "file": "assets/Welcome-34fdc67d.css",
+    "file": "assets/Welcome-5918472f.css",
     "src": "resources/js/Pages/Welcome.css"
   },
   "resources/js/Pages/Welcome.vue": {
     "css": [
-      "assets/Welcome-34fdc67d.css"
+      "assets/Welcome-5918472f.css"
     ],
-    "file": "assets/Welcome-1d161fb7.js",
+    "file": "assets/Welcome-d4723a4d.js",
     "imports": [
+      "_navigation.min-3804c9d4.js",
       "resources/js/app.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Welcome.vue"
   },
   "resources/js/app.css": {
-    "file": "assets/app-590584fb.css",
-    "isEntry": true,
-    "src": "resources/css/app.css"
+    "file": "assets/app-d1f4dc5c.css",
+    "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-590584fb.css"
+      "assets/app-d1f4dc5c.css"
     ],
     "dynamicImports": [
+      "resources/js/Pages/About.vue",
       "resources/js/Pages/Welcome.vue"
     ],
-    "file": "assets/app-01cad051.js",
+    "file": "assets/app-98b6f035.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

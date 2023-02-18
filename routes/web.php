@@ -11,6 +11,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function(){
     Route::controller(IndexController::class)->group(function () {
         Route::get('/' , 'index')->name('index');
+        Route::get('/about-us' , 'about')->name('about');
     });
 });
 Route::get('/admin/login', [AdminLoginController::class , 'index']);
