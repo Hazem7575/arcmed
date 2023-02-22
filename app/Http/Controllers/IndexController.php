@@ -11,7 +11,7 @@ class IndexController extends Controller
     public function index() {
         $sliders = Section::where('key' , 'slider')->select('image' , 'text')->get();
         $opinions = Section::where('key' , 'opinions')->select('image' , 'text')->get();
-        return view('Welcome' , compact('sliders' , 'opinions'));
+        return view('welcome' , compact('sliders' , 'opinions'));
     }
 
     public function about() {
