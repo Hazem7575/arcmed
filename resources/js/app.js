@@ -6,7 +6,8 @@ import { createInertiaApp , Head , Link } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import {MyHelper} from "@/Helper/Functions";
-
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
 createInertiaApp({
@@ -15,6 +16,7 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         return createApp({ render: () => h(App, props) })
             .use(plugin)
+            .use(ElementPlus)
             .mixin(MyHelper)
             .use(ZiggyVue, Ziggy)
             .component('Head' , Head)

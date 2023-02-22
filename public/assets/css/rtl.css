@@ -42,7 +42,10 @@ body {
 .about-content h2,
 .about-content p,
 .about-content ul li,
-.content-body-text
+.content-body-text,
+.st-tab-title,
+.slick-slide-in,
+.st-isotop-filter
 {
     font-family: "Droid Arabic Kufi" , sans-serif;
 }
@@ -65,5 +68,9 @@ body {
     margin-right: 15px;
 }
 .content-body-text {
+    text-align: right;
+}
+.st-form-field.st-style1 label {
+    font-family: "Droid Arabic Kufi" , sans-serif;
     text-align: right;
 }

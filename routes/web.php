@@ -12,6 +12,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
     Route::controller(IndexController::class)->group(function () {
         Route::get('/' , 'index')->name('index');
         Route::get('/about-us' , 'about')->name('about');
+        Route::get('/department' , 'department')->name('department');
+        Route::get('/doctors' , 'doctors')->name('doctors');
+        Route::get('/gallery' , 'gallery')->name('gallery');
+        Route::get('/contact-us' , 'contact')->name('contact');
     });
 });
 Route::get('/admin/login', [AdminLoginController::class , 'index']);

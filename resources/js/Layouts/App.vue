@@ -39,7 +39,7 @@ export default {
         Inertia.on('exception', (event) => {
             event.preventDefault()
             $('.st-perloader').removeClass('opacity-75').fadeOut(300)
-           // $self.show_error_view()
+            //$self.show_error_view()
         })
         window.addEventListener('popstate', (event) => {
             event.stopImmediatePropagation();

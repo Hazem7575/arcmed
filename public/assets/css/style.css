@@ -5920,6 +5920,7 @@ hr {
     font-size: 40px;
     margin-bottom: 19px;
 }
+
 .about-image {
     width: 100%;
     height: 100%;
@@ -6104,4 +6105,29 @@ hr {
 }
 .about-image img:hover {
     filter: brightness(0.5);
+}
+
+.st-content {
+    background: #fff !important;
+}
+:root {
+    --color-green : #19CE67
+}
+
+.color-web {
+    color: var(--color-green);
+}
+.pages-content {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+@media screen and (max-width: 700px) {
+    .st-after , .st-before {
+        background-size: cover;
+
+    }
+    .st-video-block {
+        margin-bottom: 17px;
+    }
 }

@@ -28,9 +28,9 @@
                             <ul class="st-nav-list st-onepage-nav">
                                 <li><Link :href="route('index')" class="st-smooth-move">{{__('Navbar.Home')}}</Link></li>
                                 <li><Link :href="route('about')" class="st-smooth-move">{{__('Navbar.About')}}</Link></li>
-                                <li><a href="#department" class="st-smooth-move">{{__('Navbar.department')}}</a></li>
-                                <li><a href="#doctors" class="st-smooth-move">{{__('Navbar.Doctors')}}</a></li>
-                                <li><a href="#gallery" class="st-smooth-move">{{__('Navbar.Gallery')}}</a></li>
+                                <li><Link :href="route('department')" class="st-smooth-move">{{__('Navbar.department')}}</Link></li>
+                                <li><Link :href="route('doctors')" class="st-smooth-move">{{__('Navbar.Doctors')}}</Link></li>
+                                <li><Link :href="route('gallery')" class="st-smooth-move">{{__('Navbar.Gallery')}}</Link></li>
                                 <li><a href="#contact" class="st-smooth-move">{{__('Navbar.Contact Us')}}</a></li>
                             </ul>
                             <span class="st-munu-toggle"><span></span></span>
