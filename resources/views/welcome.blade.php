@@ -20,6 +20,7 @@
         width: 100%;
         background-position: center;
         padding: 0;
+        user-select: none;
     }
     .back-small {
         background-image: linear-gradient(to bottom, rgb(11 23 33 / 92%), rgb(12 36 55 / 88%)),
