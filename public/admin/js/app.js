@@ -4,7 +4,6 @@ $(function () {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-
     global_function()
     $(document).on('click', '.btn-modal', function(e) {
         e.preventDefault();
@@ -41,6 +40,8 @@ $(document).on('submit', 'form#action_form_ajax', function(e) {
         data: data,
         beforeSend: function(xhr) {
             __disable_submit_button(form.find('button[type="submit"]'));
+            form.find('button[type="submit"] .indicator-label').hide()
+            form.find('button[type="submit"] .indicator-progress').show()
         },
         success: function(result) {
             if (result.success == true) {
@@ -55,6 +56,8 @@ $(document).on('submit', 'form#action_form_ajax', function(e) {
         },
         complete: function() {
             __enable_submit_button(form.find('button[type="submit"]'));
+            form.find('button[type="submit"] .indicator-label').show()
+            form.find('button[type="submit"] .indicator-progress').hide()
         },
         error : function (response) {
             let errors = response.responseJSON
@@ -117,11 +120,21 @@ function __select2(selector) {
 }
 
 function global_function() {
-    $(".tags").select2({
+    $(".tags_modal").select2({
         tags: true,
         dropdownParent: $(".modal")
     });
-    __Select2();
+
+    $('.select2_modal').select2({
+        placeholder : 'الرجاء الاختيار',
+        dropdownParent: $(".modal")
+    })
+
+    $('.selectTag_modal').select2({
+        placeholder : 'الرجاء الاختيار',
+        tags : true,
+        dropdownParent: $('.modal')
+    })
 }
 function __Select2 () {
     // Check if jQuery included

@@ -188,6 +188,8 @@ return [
          * Package Service Providers...
          */
         Spatie\Menu\Laravel\MenuServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+
         /*
          * Application Service Providers...
          */

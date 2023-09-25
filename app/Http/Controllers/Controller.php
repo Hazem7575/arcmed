@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\PermissionDeniedException;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -10,6 +11,13 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function CheckPermission($name , $guard = 'web') {
+        if(request()->ajax() AND !auth()->user()->can($name , $guard)) {
+            throw new PermissionDeniedException();
+        }
+        abort_if(!auth()->user()->can($name , $guard) , 403 , 'You are not authorized');
+    }
 
     public function respondWithError($message = null)
     {

@@ -2,7 +2,7 @@
 @section('title' , 'العبارات')
 @section('content')
   <div class="d-flex flex-column flex-column-fluid">
-      @component('admin.components.list' , ['title' => 'العبارات' ])
+      @component('admin.components.list' , ['title' => 'العبارات' , 'sub_title' => 'جميع العبارات'])
           <div class="m-0">
               <a href="#" class="btn btn-sm btn-flex bg-body btn-color-gray-700 btn-active-color-primary fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
                   <span class="svg-icon svg-icon-6 svg-icon-muted me-1">
@@ -21,8 +21,7 @@
                   <div class="px-7 py-5">
                       <div class="mb-10">
                           <div>
-                              {{Form::select('group', collect($groups)->unique() , old('group') , ['class' => 'form-control form-control-solid'  , 'data-kt-select2' => 'true', 'placeholder' => 'اختر المجموعه'  , 'required'])}}
-
+                              {{Form::select('group', collect($groups)->unique() , old('group') , ['class' => 'form-control form-control-solid global-select2' , 'placeholder' => 'اختر المجموعه'  , 'required'])}}
                           </div>
                       </div>
                       <div class="d-flex justify-content-end">

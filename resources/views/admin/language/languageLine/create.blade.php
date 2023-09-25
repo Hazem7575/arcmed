@@ -21,7 +21,7 @@
                         <!--begin::Col-->
                         <div class="col-md-6 fv-row fv-plugins-icon-container">
                             {!! Form::label('group' , 'المجموعة') !!}
-                            {{Form::select('group', collect($groups)->unique() , old('group') , ['class' => 'form-control form-control-solid tags'  , 'placeholder' => 'المجموعة' , 'required'])}}
+                            {{Form::select('group', collect($groups)->unique() , old('group') , ['class' => 'form-control form-control-solid tags_modal'  , 'placeholder' => 'المجموعة' , 'required'])}}
                         <div class="fv-plugins-message-container invalid-feedback"></div></div>
                         <div class="col-md-6 fv-row fv-plugins-icon-container">
                             {!! Form::label('key' , 'الاسم') !!}

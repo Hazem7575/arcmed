@@ -9,13 +9,14 @@
         <meta name="csrf-token" content="{{csrf_token()}}">
         <link href="{{asset('admin/plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('admin/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{asset('admin/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('admin/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('admin/css/droidarabickufi.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('admin/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{asset('admin/plugins/custom/fileuploader/font/font-fileuploader.css')}}">
         <link rel="stylesheet" href="{{asset('admin/plugins/custom/fileuploader/jquery.fileuploader.min.css')}}">
 		<link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css" />
-	</head>
+
+    </head>
 	<body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
 		<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
 		<div class="d-flex flex-column flex-root app-root" id="kt_app_root">
@@ -25,8 +26,8 @@
 					<div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
 						<div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
 							<a href="{{route('admin.index')}}">
-								<img alt="Logo" src="/admin/media/logos/default-dark.svg" class="h-25px app-sidebar-logo-default" />
-								<img alt="Logo" src="/admin/media/logos/default-small.svg" class="h-20px app-sidebar-logo-minimize" />
+                                <img src="{{asset('assets/img/logo.webp')}}" style="width: 120px;">
+
 							</a>
 							<div id="kt_app_sidebar_toggle" class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="app-sidebar-minimize">
 								<!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
@@ -46,9 +47,7 @@
 							<!--begin::Menu wrapper-->
 							<div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5" data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer" data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px" data-kt-scroll-save-state="true">
 								<!--begin::Menu-->
-								<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
-                                    {!!  Menu::main() !!}
-								</div>
+                                    {!! \Nwidart\Menus\Facades\Menu::render('admin-sidebar-menu', 'adminltecustom'); !!}
 							</div>
 						</div>
 
@@ -63,21 +62,10 @@
 								<!--begin::Copyright-->
 								<div class="text-dark order-2 order-md-1">
 									<span class="text-muted fw-semibold me-1">2023&copy;</span>
-									<a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
+									<a href="https://skyview.sa" target="_blank" class="text-gray-800 text-hover-primary">Skyview</a>
 								</div>
 								<!--end::Copyright-->
-								<!--begin::Menu-->
-								<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
-									<li class="menu-item">
-										<a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
-									</li>
-									<li class="menu-item">
-										<a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a>
-									</li>
-									<li class="menu-item">
-										<a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a>
-									</li>
-								</ul>
+
 								<!--end::Menu-->
 							</div>
 							<!--end::Footer container-->
@@ -92,7 +80,10 @@
 		</div>
 
 
-
+        <div class="modal fade view_modal"  tabindex="-1" aria-hidden="true">
+{{--        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>--}}
+{{--        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />--}}
+{{--        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>--}}
 
 		<script>
             var hostUrl = "/admin/";
@@ -100,6 +91,7 @@
         </script>
 		<script src="{{asset('admin/plugins/global/plugins.bundle.js')}}"></script>
 		<script src="{{asset('admin/js/scripts.bundle.js')}}"></script>
+        <script src="{{asset('admin/js/app.js')}}"></script>
 		<script src="{{asset('admin/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
 		<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 		<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
@@ -121,7 +113,7 @@
 		<script src="{{asset('admin/js/custom/utilities/modals/new-target.js')}}"></script>
 		<script src="{{asset('admin/js/custom/utilities/modals/users-search.js')}}"></script>
         <script src="{{asset('admin/plugins/custom/fileuploader/jquery.fileuploader.min.js')}}"></script>
-        <script src="{{asset('admin/js/app.js')}}"></script>
+
         @yield('script')
 	</body>
 </html>
