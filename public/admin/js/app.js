@@ -32,12 +32,15 @@ $(document).on('submit', 'form#action_form_ajax', function(e) {
     var data = form.serialize();
     var $table = $(this).data('table');
     var $modal = $(this).data('modal');
-
+    var formData = new FormData(this);
     $.ajax({
         method: 'POST',
         url: $(this).attr('action'),
         dataType: 'json',
-        data: data,
+        data:formData,
+        cache:false,
+        contentType: false,
+        processData: false,
         beforeSend: function(xhr) {
             __disable_submit_button(form.find('button[type="submit"]'));
             form.find('button[type="submit"] .indicator-label').hide()
@@ -118,6 +121,7 @@ function __select2(selector) {
     if ($('html').attr('dir') == 'rtl') selector.select2({ dir: 'rtl' });
     else selector.select2();
 }
+var editor = null;
 
 function global_function() {
     $(".tags_modal").select2({
@@ -135,6 +139,37 @@ function global_function() {
         tags : true,
         dropdownParent: $('.modal')
     })
+    tinymce.remove();
+
+    tinymce.init({
+            selector: '.editor-tinymce-ar',
+            menubar: false,
+            directionality: "rtl",
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'table emoticons template paste help'
+            ],
+            toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | ' +
+            'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+            'forecolor backcolor emoticons | help',
+        });
+        tinymce.init({
+            selector: '.editor-tinymce-en',
+            menubar: false,
+            directionality: "ltr",
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'table emoticons template paste help'
+            ],
+            toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | ' +
+                'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+                'forecolor backcolor emoticons | help',
+        });
+
+
+
 }
 function __Select2 () {
     // Check if jQuery included

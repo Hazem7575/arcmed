@@ -1,5 +1,7 @@
 <?php
 
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
 function ExtandController() {
     return new \App\Http\Controllers\Controller();
 }
@@ -19,4 +21,12 @@ function RedirectError($msg = null, $json = false) {
     }
     toastr()->error($msg);
     return redirect()->back()->with('status' , ['success' => 1, 'msg' => $msg]);
+}
+
+function prefix_lang($name , $as , $for_as = false) {
+    $lang = LaravelLocalization::getCurrentLocale();
+    if($for_as) {
+        return $name.'_'.$lang;
+    }
+    return $name.'_'.$lang.' as '. $as;
 }

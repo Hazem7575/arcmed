@@ -96,7 +96,7 @@ class ServiceDataTable extends DataTable
                   ->printable(false)
                  ->title('الاجراءات'),
             Column::make('id')->title('#'),
-            Column::make('name')->title('الخدمة'),
+            Column::make(prefix_lang('name' , 'name' , true))->title('الخدمة'),
             Column::make('name_en')->title('الخدمة بالانجليزي'),
             Column::make('order')->title('الترتيب'),
             Column::make('status')->title('الحالة')

@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class SectionService extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function service() {
+        return $this->belongsTo(Service::class);
+    }
 }

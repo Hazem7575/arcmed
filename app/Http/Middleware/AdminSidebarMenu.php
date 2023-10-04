@@ -43,8 +43,14 @@ class AdminSidebarMenu
                 $menu->dropdown('الاقسام',
                     function ($sub) {
                             $sub->url(route('admin.section.index' , ['type' => 'slider']),'الاسليدر',['icon' => 'fa fas fa-image', 'active' => (request()->segment(2) == 'section' AND request()->query('type') == 'slider')]);
-                            $sub->url(route('admin.section.index' , ['type' => 'opinions']),'اراء الناس',['icon' => 'fa fas fa-user', 'active' => (request()->segment(2) == 'section' AND request()->query('type') == 'opinions')]);
+                            //$sub->url(route('admin.section.index' , ['type' => 'opinions']),'اراء الناس',['icon' => 'fa fas fa-user', 'active' => (request()->segment(2) == 'section' AND request()->query('type') == 'opinions')]);
                             $sub->url(route('admin.services.index'),'الخدمات',['icon' => 'fa fas fa-list', 'active' => request()->segment(2) == 'services']);
+                            $sub->url(route('admin.sectionService.index'),'اقسام الخدمات',['icon' => 'fa fas fa-list', 'active' => request()->segment(2) == 'sectionService']);
+                            $sub->url(route('admin.staff.index'),'طاقم الاطباء',['icon' => 'fa fas fa-user-tie', 'active' => request()->segment(2) == 'staff']);
+                            $sub->url(route('admin.clinic.index'),'العيادات',['icon' => 'fa fas fa-list', 'active' => request()->segment(2) == 'clinic']);
+                            $sub->url(route('admin.connect.index'),'تواصل معنا',['icon' => 'fa fas fa-envelope', 'active' => request()->segment(2) == 'connect']);
+                            $sub->url(route('admin.compain.index'),'الشكاوي',['icon' => 'fa fas fa-envelope', 'active' => request()->segment(2) == 'compain']);
+                            $sub->url(route('admin.faq.index'),'الاسئلة المتكررة',['icon' => 'fa fas fa-info', 'active' => request()->segment(2) == 'faq']);
                     },
                     ['icon' => 'fa fas fa-list']
                 )->order(3);

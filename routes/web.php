@@ -13,9 +13,16 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
         Route::get('/' , 'index')->name('index');
         Route::get('/about-us' , 'about')->name('about');
         Route::get('/department' , 'department')->name('department');
+        Route::get('/services/{service}' , 'services')->name('services');
         Route::get('/doctors' , 'doctors')->name('doctors');
         Route::get('/gallery' , 'gallery')->name('gallery');
         Route::get('/contact-us' , 'contact')->name('contact');
+        Route::post('/contact-us-send' , 'contact_store')->name('contact.store');
+        Route::get('/complain' , 'compain')->name('compain');
+        Route::post('/complain-store' , 'compain_store')->name('compain.store');
+        Route::get('/clinic/{clinic}' , 'clinic')->name('clinic');
+        Route::get('/staff/{staff}' , 'staff_show')->name('staff.show');
+        Route::get('/education' , 'education')->name('education');
     });
 });
 Route::get('/admin/login', [AdminLoginController::class , 'index']);

@@ -20,6 +20,7 @@ class ServiceController extends Controller
      */
     public function index(ServiceDataTable $dataTable)
     {
+        $this->CheckPermission('services.index');
         return $dataTable->render('admin.services.index');
     }
 
@@ -30,6 +31,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
+        $this->CheckPermission('services.create');
         return view('admin.services.create');
     }
 
@@ -41,8 +43,9 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+        $this->CheckPermission('services.create');
         $validate = $request->validate([
-            'name' => 'required',
+            'name_ar' => 'required',
             'name_en' => 'required',
             'status' => 'required',
             'order' => 'required',
@@ -82,6 +85,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
+        $this->CheckPermission('services.edit');
         return view('admin.services.edit' , compact('service'));
     }
 
@@ -94,8 +98,9 @@ class ServiceController extends Controller
      */
     public function update(Request $request, Service $service)
     {
+        $this->CheckPermission('services.edit');
         $validate = $request->validate([
-            'name' => 'required',
+            'name_ar' => 'required',
             'name_en' => 'required',
             'status' => 'required',
             'order' => 'required',
@@ -129,6 +134,7 @@ class ServiceController extends Controller
      */
     public function destroy(Service $service)
     {
+        $this->CheckPermission('services.destroy');
         DB::beginTransaction();
         try {
             $service->delete();

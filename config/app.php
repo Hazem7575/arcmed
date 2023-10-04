@@ -189,6 +189,8 @@ return [
          */
         Spatie\Menu\Laravel\MenuServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -216,6 +218,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'Menu' => Spatie\Menu\Laravel\Facades\Menu::class,
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+
     ])->toArray(),
 
 ];

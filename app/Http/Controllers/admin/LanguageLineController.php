@@ -45,7 +45,11 @@ class LanguageLineController extends Controller
                                 <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor" />
                             </svg>
                         </span>
-                    </a>');
+                    </a>')
+                ->editColumn('group' , function ($row) {
+                    $copy = '{{__("'.$row->group.".".$row->key.'")}}';
+                    return "<span class='copy_lang_group' data-copy='$copy'>$row->group</span>";
+                });
             foreach ($group_lang as $key => $lang) {
                 $table->addColumn($key, function ($row) use ($key) {
                     return $row->text[$key] ?? null;
@@ -56,7 +60,7 @@ class LanguageLineController extends Controller
                     $q->where('text->'.$key , 'LIKE' , "%$keyword%");
                 });
             }
-            $table->rawColumns(['action'])->make(true);
+            $table->rawColumns(['action' , 'group'])->make(true);
 
             return $table->toJson();
         }

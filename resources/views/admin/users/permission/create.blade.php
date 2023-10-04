@@ -3,7 +3,7 @@
         <div class="col-sm-12">
             <div class="form-group ">
                 {!! Form::label('group' , 'مجموعة الصلاحية') !!}
-                {{Form::select('group', $groups, null , ['class' => 'form-control form-control-solid selectTag' , 'style' => 'width:100%'])}}
+                {{Form::select('group', $groups, null , ['class' => 'form-control form-control-solid selectTag_modal' , 'style' => 'width:100%'])}}
             </div>
         </div>
         <div class="col-sm-12">

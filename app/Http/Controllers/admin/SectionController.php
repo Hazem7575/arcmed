@@ -59,13 +59,10 @@ class SectionController extends Controller
 
             $section = Section::create($data->all());
             DB::commit();
-            toastr()->success('تم الاضافة بنجاح');
-            return to_route('admin.section.index' , ['type' => $request->key]);
+            return $this->respondSuccess('تم الاضافة بنجاح');
         }catch (\Exception $exception) {
             DB::rollBack();
-            toastr()->success($exception->getMessage());
-            return redirect()->back();
-
+            return $this->respondWithError($exception->getMessage());
         }
 
     }
@@ -112,13 +109,10 @@ class SectionController extends Controller
             }
             $section->update($data->all());
             DB::commit();
-            toastr()->success('تم التحديث بنجاح');
-            return to_route('admin.section.index' , ['type' => $section->key]);
+            return $this->respondSuccess('تم التحديث بنجاح');
         }catch (\Exception $exception) {
             DB::rollBack();
-            toastr()->success($exception->getMessage());
-            return redirect()->back();
-
+            return $this->respondWithError($exception->getMessage());
         }
     }
 

@@ -127,3 +127,10 @@ table.dataTable thead > tr > th.sorting_asc:before, table.dataTable thead > tr >
 .select2-hidden-accessible {
     display: none;
 }
+.tox-tinymce {
+    border-radius: 0 !important;
+    border: 1px solid #cccccc85;
+}
+.tox .tox-statusbar {
+    display: none !important;
+}

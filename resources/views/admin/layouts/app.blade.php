@@ -91,6 +91,9 @@
         </script>
 		<script src="{{asset('admin/plugins/global/plugins.bundle.js')}}"></script>
 		<script src="{{asset('admin/js/scripts.bundle.js')}}"></script>
+        <script src="https://cdn.tiny.cloud/1/7ol5hhw7w3btt791gxthayua1qzenpdtwh7dlrqn73hp163t/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+
         <script src="{{asset('admin/js/app.js')}}"></script>
 		<script src="{{asset('admin/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
 		<script src="https://cdn.amcharts.com/lib/5/index.js"></script>

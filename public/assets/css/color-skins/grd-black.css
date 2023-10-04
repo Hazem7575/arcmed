@@ -1,0 +1,125 @@
+/* Desktop Main Menu Color */
+
+.wsmainfull {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.wsactive .wsmenu>.wsmenu-list {
+  background: #000;
+}
+
+
+/* Mobile Header Color */
+
+.wsmobileheader {background: rgb(0 0 0 / 20%);}
+
+.wsmenu>.wsmenu-list>li>a {
+    color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li>a .wsarrow:after {
+    border-top-color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li>a:hover .wsarrow:after {
+    border-top-color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li>a.active .wsarrow:after {
+    border-top-color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li:hover>a .wsarrow:after {
+    border-top-color: var(--main-color-two);
+}
+
+.wsmenu>.wsmenu-list>li>a>.fa {
+    color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li>a.active .fa {
+    color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li:hover>a>.fa {
+    color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li>a:hover .fa {
+    color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li>.wsmegamenu .menu_form input[type="submit"] {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#383d41), to(#5d6069));
+    background: -webkit-linear-gradient(left, #383d41, #5d6069);
+    background: -moz-linear-gradient(left, #383d41, #5d6069);
+    background: -o-linear-gradient(left, #383d41, #5d6069);
+    background: -ms-linear-gradient(left, #383d41, #5d6069);
+    background: linear-gradient(left, #383d41, #5d6069);
+    background-color: #5d6069;
+    color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li>.wsmegamenu .menu_form input[type="button"] {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#383d41), to(#5d6069));
+    background: -webkit-linear-gradient(left, #383d41, #5d6069);
+    background: -moz-linear-gradient(left, #383d41, #5d6069);
+    background: -o-linear-gradient(left, #383d41, #5d6069);
+    background: -ms-linear-gradient(left, #383d41, #5d6069);
+    background: linear-gradient(left, #383d41, #5d6069);
+    background-color: #5d6069;
+    color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li>a.active {
+    /* background-color: #30A5FF; */
+    color: #83D851 !important;
+}
+
+.wsmenu>.wsmenu-list>li:hover>a {
+    /* background-color: #30A5FF; */
+    color: #83D851;
+}
+
+.wsmenu>.wsmenu-list>li>ul.sub-menu>li:hover>a {
+    /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#383d41), to(#5d6069));
+    background: -webkit-linear-gradient(left, #383d41, #5d6069);
+    background: -moz-linear-gradient(left, #383d41, #5d6069);
+    background: -o-linear-gradient(left, #383d41, #5d6069);
+    background: -ms-linear-gradient(left, #383d41, #5d6069);
+    background: linear-gradient(left, #292662, #50934C);
+    background-color: #5d6069; */
+    background: var(--main-color);
+    color: #30A5FF;
+}
+
+.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li:hover>a {
+    /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#383d41), to(#5d6069));
+    background: -webkit-linear-gradient(left, #383d41, #5d6069);
+    background: -moz-linear-gradient(left, #383d41, #5d6069);
+    background: -o-linear-gradient(left, #383d41, #5d6069);
+    background: -ms-linear-gradient(left, #383d41, #5d6069);
+    background: linear-gradient(left, #383d41, #5d6069);
+    background-color: #5d6069; */
+    background: rgb(41 38 98 / 90%);
+    color: #fff;
+}
+
+.wsmenu>.wsmenu-list>li>ul.sub-menu>li>ul.sub-menu>li>ul.sub-menu>li:hover a {
+    /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#383d41), to(#5d6069));
+    background: -webkit-linear-gradient(left, #383d41, #5d6069);
+    background: -moz-linear-gradient(left, #383d41, #5d6069);
+    background: -o-linear-gradient(left, #383d41, #5d6069);
+    background: -ms-linear-gradient(left, #383d41, #5d6069);
+    background: linear-gradient(left, #383d41, #5d6069);
+    background-color: #5d6069; */
+    background: linear-gradient(to left, rgb(80 147 76 / 90%) 0%, rgb(41 38 98 / 90%) 100%);
+    color: #fff;
+}

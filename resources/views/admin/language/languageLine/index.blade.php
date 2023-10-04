@@ -34,7 +34,7 @@
       @component('admin.components.widgets' , ['title' => 'العبارات' , 'small' => 'جميع عبارات الترجمه'])
               @slot('button')
 
-                  <button href="javascript:void(0)"  data-container="#lang_modal" data-href="{{route('admin.lang.create')}}" class="btn btn-sm btn-light-primary btn-modal">
+                  <a href="javascript:void(0)" data-container=".view_modal" data-href="{{route('admin.lang.create')}}" class="btn btn-sm btn-light-primary btn-modal">
                       <span class="svg-icon svg-icon-2">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect opacity="0.5" x="11.364" y="20.364" width="16" height="2" rx="1" transform="rotate(-90 11.364 20.364)" fill="currentColor"></rect>
@@ -42,7 +42,7 @@
                             </svg>
                         </span>
                       اضافة عباره جديدة
-                  </button>
+                  </a>
               @endslot
               <div class="table-responsive">
                   <table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3" id="table-lang">
@@ -53,7 +53,7 @@
                           @foreach($group_lang as $key => $lang)
                               <th>{{$lang}}</th>
                           @endforeach
-                          <th>الاجراءات</th>
+                          <th width="150px">الاجراءات</th>
                       </tr>
                       </thead>
                   </table>
@@ -62,7 +62,14 @@
       <div class="modal fade" id="lang_modal" tabindex="-1" aria-hidden="true">
       </div>
   </div>
-
+  <style>
+      .copy_lang_group {
+          cursor: pointer;
+      }
+      div.dataTables_wrapper div.dataTables_filter {
+          text-align: left;
+      }
+  </style>
 @stop
 
 
@@ -81,6 +88,7 @@
                 }
             },
             order : [],
+            dom : '<"row "<"col-sm-2"l><"col-sm-10"f> r>tip',
             columns: [
                 {data : 'group' , name: 'group'},
                 {data : 'key' , name: 'key'},
@@ -93,6 +101,19 @@
             e.preventDefault();
             TableLang.ajax.reload()
         })
+
+        $(document).on('click' , '.copy_lang_group' , function (e) {
+            e.preventDefault();
+            var textToCopy = $(this).data("copy");
+            var $tempInput = $("<textarea>");
+            $("body").append($tempInput);
+            $tempInput.val(textToCopy).select();
+            document.execCommand("copy");
+            $tempInput.remove();
+            toastr.success("تم نسخ النص: " + textToCopy);
+        })
+
+
     </script>
 @endsection
 
