@@ -68,6 +68,17 @@
                         @endif
                         <li aria-haspopup="true"><a href="{{route('doctors')}}" class="{{Route::is('doctors') ? 'active' : ''}}"> {{__("home.Health staff")}} </a></li>
                         <li aria-haspopup="true"><a href="{{route('education')}}" class="{{Route::is('education') ? 'active' : ''}}">  {{__("home.Health Education")}}  </a></li>
+                        <li class="d-mobile">
+                            <a href="{{route('contact')}}">
+                                {{__("home.Connect us")}}
+                            </a>
+                        </li>
+                        <li class="d-mobile">
+                            <a href="{{ LaravelLocalization::getLocalizedURL(LaravelLocalization::setLocale() == 'en' ? 'ar' : 'en', null, [], true) }}">
+                                {{LaravelLocalization::setLocale() == 'en' ? 'Ar' : 'En'}}
+                            </a>
+                        </li>
+
                     </ul>
                     <div class="btns">
                         <a href="{{route('contact')}}" class="contact-btn"> {{__("home.Connect us")}} </a>
@@ -130,6 +141,9 @@
                             </a>
                             <a href="#">
                                 <img src="{{asset('assets/img/Icons/snapchat.png')}}" alt="">
+                            </a>
+                            <a href="https://arcphysio.sa:2096/" target="_blank">
+                                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><polygon points="56 20 32 12 8 20 8 52 56 52 56 20"></polygon><polyline points="48 28 32 36 16 28"></polyline></g></svg>
                             </a>
                         </div>
                     </div>

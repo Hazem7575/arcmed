@@ -12,7 +12,7 @@
                                 <h1 class="text-dark fw-bolder mb-3" style="color: #009ef7 !important;font-size: 15px; font-weight: bold !important;">تسجيل الدخول للوحة التحكم</h1>
                             </div>
                             <div class="fv-row mb-8">
-                                <input type="text" placeholder="البريد الاكتروني" name="email" autocomplete="off" class="form-control bg-transparent" style="padding: 15px;" />
+                                <input type="text" placeholder="اسم المستخدم" name="email" autocomplete="off" class="form-control bg-transparent" style="padding: 15px;" />
                             </div>
                             <div class="fv-row mb-3">
                                 <input type="password" placeholder="كلمة المرور" name="password" autocomplete="off" class="form-control bg-transparent" style="padding: 15px;" />

@@ -14,17 +14,6 @@ var KTSigninGeneral = function() {
 			form,
 			{
 				fields: {
-					'email': {
-                        validators: {
-                            regexp: {
-                                regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                message: 'البريد الاكتروني غير صحيح',
-                            },
-							notEmpty: {
-								message: 'البريد الاكتروني مطلوب'
-							}
-						}
-					},
                     'password': {
                         validators: {
                             notEmpty: {

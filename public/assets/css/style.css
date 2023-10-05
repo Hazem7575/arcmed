@@ -1769,6 +1769,12 @@ footer {
     background: rgb(16 102 166 / 26%);
     z-index: 99999999;
 }
+.d-mobile {
+    display: none !important;
+}
+#faq .accordion .accordion-item button {
+    z-index: 0;
+}
 @media (max-width: 750px) {
     .modal-container {
         width: 90%;
@@ -1901,9 +1907,7 @@ footer {
         text-align: center;
         font-weight: bold;
     }
-    #faq .accordion .accordion-item button {
-        z-index: 0;
-    }
+
     #section-header.breadcrumb .breadcrumb-title {
         width: 100%;
         text-align: center;
@@ -1930,7 +1934,10 @@ footer {
     .wsmenu .btns {
         display: none;
     }
-    .wsmenu>.wsmenu-list{
+    .wsmenu>.wsmenu-list {
         overflow-x: hidden;
+    }
+    .d-mobile {
+        display: block !important;
     }
 }
