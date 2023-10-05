@@ -82,7 +82,8 @@ class FaqController extends Controller
      */
     public function edit(Faq $faq)
     {
-        //
+        $this->CheckPermission('faq.edit');
+        return view('admin.faq.edit' , compact('faq'));
     }
 
     /**
@@ -94,7 +95,25 @@ class FaqController extends Controller
      */
     public function update(Request $request, Faq $faq)
     {
-        //
+        $this->CheckPermission('faq.edit');
+        $validate = $request->validate([
+            'name_ar' => 'required',
+            'name_en' => 'required',
+            'status' => 'required',
+            'order' => 'required',
+            'description_ar' => 'nullable',
+            'description_en' => 'nullable',
+        ]);
+
+        DB::beginTransaction();
+        try {
+            $faq->update($validate);
+            DB::commit();
+            return $this->respondSuccess('تم اضافة سوال بنجاح');
+        }catch (\Exception $exception) {
+            DB::rollBack();
+            return $this->respondWithError($exception->getMessage());
+        }
     }
 
     /**

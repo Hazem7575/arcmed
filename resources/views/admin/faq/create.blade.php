@@ -27,13 +27,13 @@
         <div class="clearfix"></div>
         <div class="col-sm-6">
             <div class="form-group ">
-                {!! Form::label('description_ar' , 'الاسم بالانجليزي') !!}
+                {!! Form::label('description_ar' , 'الشرح') !!}
                 {{Form::textarea('description_ar',null , ['class' => 'form-control form-control-solid editor-tinymce-ar' , 'style' => 'width:100%'])}}
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group">
-                {!! Form::label('description_en' , 'الاسم بالانجليزي') !!}
+                {!! Form::label('description_en' , 'الشرح بالانجليزي') !!}
                 {{Form::textarea('description_en',null, ['class' => 'form-control form-control-solid editor-tinymce-en' , 'style' => 'width:100%'])}}
             </div>
         </div>
