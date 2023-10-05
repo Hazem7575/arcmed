@@ -31,7 +31,7 @@
                     <p>
                         {{__("home.title home 2")}}
                     </p>
-                    <a href="#" class="btn-read-more">{{__("home.Read more")}}</a>
+                    <a href="#" class="btn-read-more" style="display: none">{{__("home.Read more")}}</a>
                 </div>
                 <div class="col-md-6">
                     <div class="group-image-about">
@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-md-8 background-image-categories">
                     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true" uk-slider="clsActivated: uk-transition-active">
-                        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@m uk-grid">
+                        <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid">
                             @foreach($clinics as $clinic)
                             <li>
                                 <div class="box-category">
@@ -57,7 +57,6 @@
                                     <h1>{{$clinic->name}}</h1>
                                     <span>{{\Illuminate\Support\Str::limit(strip_tags($clinic->description) , 170 , '...')}}</span>
                                     <a href="javascript:void(0)" data-href="{{route('clinic' , $clinic->id)}}"  data-title="{{$clinic->name}}" class="modal-button btn-read-more">{{__("home.Read more")}}</a>
-
                                 </div>
                             </li>
                             @endforeach
@@ -154,7 +153,7 @@
                     </div>
                     <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
                 </div>
-                <a href="#" class="btn-read-more m-auto">{{__("home.See all services")}}</a>
+                <a href="#" class="btn-read-more m-auto"  style="display: none">{{__("home.See all services")}}</a>
             </div>
         </div>
     </section>

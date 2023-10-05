@@ -1310,10 +1310,13 @@ video {
         cursor: pointer;
         height: 2px;
         width: 17px;
-        background: #848080;
+        background: #fff;
         position: absolute;
         display: block;
         content: '';
+    }
+    .wsmobileheader {
+        background: #1e87f0 !important;
     }
     .wsanimated-arrow span:before {
         top: -7px;
@@ -1454,6 +1457,9 @@ video {
         -o-transform: rotate(180deg);
         transform: rotate(180deg);
     }
+
+
+
     /*End Media Query*/
 }
 

@@ -2,10 +2,10 @@
     <div class="col-12">
         <div class="staff-content" style="padding: 20px;color: #000">
             <div class="row">
-                <div class="col-md-2" style="padding-left: 0;">
+                <div class="col-md-2 col-4" style="padding-left: 0;">
                     <img src="{{asset($clinic->image)}}" class="img-style-staff" alt="{{ $clinic->{prefix_lang('name' , 'name' , true)} }}">
                 </div>
-                <div class="col-md-8" style="padding-right: 0;">
+                <div class="col-md-8  col-8" style="padding-right: 0;">
                     <h3 class="title-staff">{{ $clinic->{prefix_lang('name' , 'name' , true)} }}</h3>
                 </div>
                 <div class="clearfix"></div>

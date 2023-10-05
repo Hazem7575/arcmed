@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
-    $(window).scroll(function() {
-        console.log($(window).scrollTop() , $('#section-header').height())
+    $(window).on("scroll touchmove", function() {
+        console.log($(window).scrollTop());
+
         if ($(window).scrollTop() >= 75 && $(window).scrollTop() < $('#section-header').height()) { // Check if scrolled 55px or more
             $(".wsmainwp").addClass("fixed").removeClass("fixed2");
         }else if ($(window).scrollTop() >= $('#section-header').height()) {
@@ -24,7 +25,7 @@ $('.modal-button').on('click' , function (e) {
     e.preventDefault();
     $('.show-popup-modal').addClass('is-open')
     $('.show-popup-modal .title-modal-info').text($(this).data('title'))
-    $('body').css({overflow : 'hidden'})
+    // $('body').css({overflow : 'hidden'})
     $.ajax({
         url : $(this).data('href'),
         method : 'GET',
@@ -37,7 +38,7 @@ $('.modal-button').on('click' , function (e) {
 })
 
 function closeModal() {
-    $('body').css({overflow : 'initial'})
+    // $('body').addClass('')
     $('.show-popup-modal .content-modal').addClass('loading')
     $('.show-popup-modal .content-modal .body-modal').html('')
     $('.show-popup-modal').removeClass('is-open')

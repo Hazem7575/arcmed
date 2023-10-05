@@ -123,7 +123,7 @@
                         <p>{{__("home.Tel footer")}}</p>
                         <div class="social-icons">
                             <a href="#">
-                                <img src="{{assert('assets/img/Icons/twitter.png')}}" alt="">
+                                <img src="{{asset('assets/img/Icons/twitter.png')}}" alt="">
                             </a>
                             <a href="#">
                                 <img src="{{asset('assets/img/Icons/instagram.png')}}" alt="">
