@@ -1940,4 +1940,7 @@ footer {
     .d-mobile {
         display: block !important;
     }
+    .wsactive .wsmobileheader {
+        margin-left: 246px;
+    }
 }

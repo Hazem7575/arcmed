@@ -25,6 +25,9 @@ function RedirectError($msg = null, $json = false) {
 
 function prefix_lang($name , $as , $for_as = false) {
     $lang = LaravelLocalization::getCurrentLocale();
+    if(request()->segment(1) == 'admin') {
+        $lang = 'ar';
+    }
     if($for_as) {
         return $name.'_'.$lang;
     }
