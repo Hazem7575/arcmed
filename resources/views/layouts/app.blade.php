@@ -10,22 +10,24 @@
     <title>العلاج الطبيعي</title>
     <link rel="shortcut icon" href="{{asset('assets/img/logo.webp')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.xyz/npm/uikit@3.16.26/dist/css/uikit.min.css" />
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}?v={{$assets}}">
+    <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}?v={{$assets}}">
     <!---------------------------- Header -------------------------------->
-    <link rel="stylesheet" href="{{asset('assets/css/header.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/color-skins/grd-black.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/dropdown-effects/rotate-x.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/header.css')}}?v={{$assets}}">
+    <link rel="stylesheet" href="{{asset('assets/css/color-skins/grd-black.css')}}?v={{$assets}}">
+    <link rel="stylesheet" href="{{asset('assets/css/dropdown-effects/rotate-x.css')}}?v={{$assets}}">
     <!---------------------------- Header -------------------------------->
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}?v={{$assets}}">
     @if(LaravelLocalization::setLocale() == 'en')
-        <link rel="stylesheet" href="{{asset('assets/css/style_en.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/style_en.css')}}?v={{$assets}}">
     @endif
     @yield('style')
 </head>
 <body>
 @include('sweetalert::alert')
-
+<div class="loading-screen" id="loading-screen">
+    <div class="loader"></div>
+</div>
 <section id="section-header" class="@yield('section_title')">
     <header>
         <div class="wsmobileheader clearfix ">
@@ -134,7 +136,7 @@
                         <p>{{__("home.Tel footer")}}</p>
                         <div class="social-icons">
                             <a href="#">
-                                <img src="{{asset('assets/img/Icons/twitter.png')}}" alt="">
+                                <i style="color: #fff;font-size: 26px;" class="fa-brands fa-x-twitter"></i>
                             </a>
                             <a href="#">
                                 <img src="{{asset('assets/img/Icons/instagram.png')}}" alt="">
@@ -143,7 +145,7 @@
                                 <img src="{{asset('assets/img/Icons/snapchat.png')}}" alt="">
                             </a>
                             <a href="https://arcphysio.sa:2096/" target="_blank">
-                                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><polygon points="56 20 32 12 8 20 8 52 56 52 56 20"></polygon><polyline points="48 28 32 36 16 28"></polyline></g></svg>
+                                <img src="{{asset('assets/img/contact/mail.png')}}" alt="">
                             </a>
                         </div>
                     </div>
@@ -166,11 +168,17 @@
 <script src="https://cdn.jsdelivr.xyz/npm/uikit@3.16.26/dist/js/uikit-icons.min.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}?v={{$assets}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('assets/js/header.js')}}"></script>
-<script src="{{asset('assets/js/main.js')}}"></script>
+<script src="{{asset('assets/js/owl.carousel.min.js')}}?v={{$assets}}"></script>
+<script src="{{asset('assets/js/header.js')}}?v={{$assets}}"></script>
+<script src="{{asset('assets/js/main.js')}}?v={{$assets}}"></script>
+<script>
+    $(function () {
+        document.getElementById("loading-screen").style.display = "none";
+        document.body.classList.add("loaded");
+    })
+</script>
 @yield('script')
 </body>
 </html>

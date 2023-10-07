@@ -109,7 +109,7 @@ class FaqController extends Controller
         try {
             $faq->update($validate);
             DB::commit();
-            return $this->respondSuccess('تم اضافة سوال بنجاح');
+            return $this->respondSuccess('تم تحديث سوال بنجاح');
         }catch (\Exception $exception) {
             DB::rollBack();
             return $this->respondWithError($exception->getMessage());

@@ -3,10 +3,10 @@
 
         <div class="staff-content" style="padding: 20px;color: #000">
             <div class="row">
-                <div class="col-md-2" style="padding-left: 0;">
+                <div class="col-md-2 col-4" style="padding-left: 0;">
                     <img src="{{asset($staff->image)}}" class="img-style-staff" alt="{{ $staff->{prefix_lang('name' , 'name' , true)} }}">
                 </div>
-                <div class="col-md-8" style="padding-right: 0;">
+                <div class="col-8" style="padding-right: 0;">
                     <h3 class="title-staff">{{ $staff->{prefix_lang('name' , 'name' , true)} }}</h3>
                     <h5 class="title-staff-sub">{{ $staff->{prefix_lang('specialty' , 'specialty' , true)} }}</h5>
                 </div>
