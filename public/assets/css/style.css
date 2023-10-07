@@ -1845,8 +1845,8 @@ footer {
         text-align: center;
     }
     .container-fluid {
-        padding-right: 10px;
-        padding-left: 17px;
+        /*padding-right: 10px;*/
+        /*padding-left: 17px;*/
     }
     #section-header.breadcrumb {
         height: 200px;

@@ -1,5 +1,5 @@
 @php
-    $assets = 3;
+    $assets = 4;
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{LaravelLocalization::setLocale() == 'en' ? 'ltr' : 'rtl'}}">
