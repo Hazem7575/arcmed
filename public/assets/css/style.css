@@ -61,7 +61,7 @@ a:hover {
 body {
     font-family: arabic , "Droid Arabic Kufi",sans-serif !important;
     user-select: none;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 .container-fluid {
     padding-right: 100px;
