@@ -1927,6 +1927,9 @@ footer {
         background: #000;
         padding-top:0px;
     }
+    .about-footer {
+        background: #000;
+    }
     #footer_content {
         padding-top: 13px;
     }
