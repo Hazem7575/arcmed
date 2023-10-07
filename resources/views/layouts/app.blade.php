@@ -32,7 +32,7 @@
     <header>
         <div class="wsmobileheader clearfix ">
             <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
-            <span class="smllogo"><img src="{{asset('assets/img/logo.webp')}}" width="80" alt="" /></span>
+            <span class="smllogo"><img src="{{asset('assets/img/logo.webp')}}?v=1" width="80" alt="" /></span>
 
         </div>
         <div class="wsmainfull clearfix">
