@@ -25,7 +25,7 @@ $('.modal-button').on('click' , function (e) {
     e.preventDefault();
     $('.show-popup-modal').addClass('is-open')
     $('.show-popup-modal .title-modal-info').text($(this).data('title'))
-    // $('body').css({overflow : 'hidden'})
+    $('body').addClass('no-scroll')
     $.ajax({
         url : $(this).data('href'),
         method : 'GET',
@@ -38,7 +38,7 @@ $('.modal-button').on('click' , function (e) {
 })
 
 function closeModal() {
-    // $('body').addClass('')
+    $('body').removeClass('no-scroll')
     $('.show-popup-modal .content-modal').addClass('loading')
     $('.show-popup-modal .content-modal .body-modal').html('')
     $('.show-popup-modal').removeClass('is-open')

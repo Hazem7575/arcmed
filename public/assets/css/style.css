@@ -60,7 +60,7 @@ a:hover {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 0px;
 }
 
 /* Track */
@@ -1775,6 +1775,9 @@ footer {
 #faq .accordion .accordion-item button {
     z-index: 0;
 }
+.no-scroll {
+    overflow: hidden;
+}
 @media (max-width: 750px) {
     .modal-container {
         width: 90%;
@@ -1926,7 +1929,7 @@ footer {
         border-radius: 0;
     }
     .content-modal {
-        max-height: calc(100vh - 67px);
+        max-height: calc(100vh - 80px);
     }
     .staff-content {
         padding: 0 !important;
