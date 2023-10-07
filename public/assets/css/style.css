@@ -1905,7 +1905,7 @@ footer {
         border-radius: 0;
     }
     .content-modal {
-        max-height: calc(100vh - 80px);
+        max-height: calc(100vh - 100px);
     }
     .staff-content {
         padding: 0 !important;
