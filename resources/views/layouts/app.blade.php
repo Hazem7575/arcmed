@@ -1,5 +1,5 @@
 @php
-    $assets = 15;
+    $assets = 16;
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{LaravelLocalization::setLocale() == 'en' ? 'ltr' : 'rtl'}}">
@@ -190,7 +190,7 @@
     width: 60px;
     height: 60px;
     bottom: 40px;
-    left: 40px;
+    left: 12px;
     background-color: #25d366;
     color: #FFF;
     border-radius: 50px;

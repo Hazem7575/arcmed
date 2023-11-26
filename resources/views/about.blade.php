@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('section_title' , 'breadcrumb')
+@section('section_title' , 'breadcrumb about-as')
 @section('breadcrumb')
     <div class="breadcrumb-title">
         <h4> {{__("home.who are we")}} </h4>
@@ -186,6 +186,7 @@
         .about-footer {
             background-color: #EAF6FF;
         }
+
     </style>
 @stop
 @section('footer_class' , 'about-footer')

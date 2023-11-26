@@ -1999,6 +1999,12 @@ footer {
     z-index: 9999999999;
     transition: 0.5s;
 }
+#section-header.breadcrumb.about-as::before {
+    opacity: 0.4;
+}
+#section-header.breadcrumb.staff {
+    background-image: url(../img-v2/9.webp);
+}
 
 .loader {
     border: 4px solid #f3f3f3;

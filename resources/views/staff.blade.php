@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('section_title' , 'breadcrumb about')
+@section('section_title' , 'breadcrumb about staff')
 @section('breadcrumb')
     <div class="breadcrumb-title">
         <h4>طاقم الاطباء</h4>
