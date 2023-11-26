@@ -1999,7 +1999,7 @@ footer {
     z-index: 9999999999;
     transition: 0.5s;
 }
-#section-header.breadcrumb.about-as::before {
+#section-header.breadcrumb::before {
     opacity: 0.4;
 }
 #section-header.breadcrumb.staff {
