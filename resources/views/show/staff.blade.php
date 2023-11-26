@@ -28,7 +28,7 @@
         object-fit: scale-down;
         border: 1px solid rgba(0,0,0,0.1);
         box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
-        background: #045b9e;
+        background: #fff;
     }
     .title-staff {
         color: #000;

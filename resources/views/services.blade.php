@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('section_title' , 'breadcrumb about')
+@section('section_title' , 'breadcrumb about-dem')
 @section('breadcrumb')
     <div class="breadcrumb-title">
         <h4> خدماتنا </h4>
@@ -9,7 +9,7 @@
     <section id="section-services">
         <div class="container-fluid">
             <div class="row">
-                @foreach($service->sections as $section)
+                @foreach($service_all as $section)
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <a href="javascript:void(0)">
                         <div class="box-category">

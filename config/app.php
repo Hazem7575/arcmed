@@ -187,10 +187,9 @@ return [
         /*
          * Package Service Providers...
          */
-        Spatie\Menu\Laravel\MenuServiceProvider::class,
+//        Spatie\Menu\Laravel\MenuServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
-
 
         /*
          * Application Service Providers...

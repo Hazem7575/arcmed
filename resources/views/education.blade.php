@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('section_title' , 'breadcrumb about')
+@section('section_title' , 'breadcrumb about Education')
 @section('breadcrumb')
     <div class="breadcrumb-title">
         <h4> {{__("home.Health Education")}} </h4>
@@ -10,15 +10,14 @@
         #section-header {
             margin-bottom: 0;
         }
+        #section-header.breadcrumb.about.Education {
+            background-image: url(../assets/img/bread2.webp);
+            background-position: center;
+        }
     </style>
     <section id="faq">
         <div class="container-fluid">
-            <div class="title">
-                <h2> {{__("home.Frequently asked questions")}} </h2>
-                <h3>
-                    {{__("home.Frequently2")}}
-                </h3>
-            </div>
+           
             <div class="row">
 
                 <div class="col-md-12">

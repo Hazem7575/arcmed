@@ -35,8 +35,9 @@ class IndexController extends Controller
         return view('Department' , compact('clinics'));
     }
 
-    public function services(Service $service) {
-        return view('services' , compact('service'));
+    public function services() {
+        $service_all = SectionService::get();
+        return view('services' , compact('service_all'));
     }
 
     public function doctors() {

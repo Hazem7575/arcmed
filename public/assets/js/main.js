@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
     $(window).on("scroll touchmove", function() {
-        console.log($(window).scrollTop());
 
         if ($(window).scrollTop() >= 75 && $(window).scrollTop() < $('#section-header').height()) { // Check if scrolled 55px or more
             $(".wsmainwp").addClass("fixed").removeClass("fixed2");

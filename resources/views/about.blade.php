@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 left" >
                     <div class="about-img">
-                        <img src="{{asset('assets/img/about/s1.webp')}}">
+                        <img src="{{asset('/assets/img-v2/1.webp')}}">
                     </div>
                     <img class="about-icon" src="{{asset('assets/img/Icons/youtube.png')}}">
                 </div>
@@ -115,70 +115,7 @@
     </section>
     <!--------------------------------- About Section End ------------------------------------>
     <!--------------------------------- About Section Start ------------------------------------>
-    <section id="mission">
-        <div class="container-fluid">
-            <div class="title">
-                <h2> {{__("home.Committed to excellence")}} </h2>
-                <h3> {{__("home.With every patient, in every encounter, every time.")}} </h3>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="{{asset('assets/img/about/mis.webp')}}">
-                        </div>
-                        <div class="card-body">
-                            <p>
-                                {{__("home.title about section 1")}}
-                            </p>
-                            <h5>
-                                {{__("home.Our mission")}}
-                                <img class="plus" src="{{asset('assets/img/Icons/plus-w.png')}}" alt="" width="20">
-                                <img class="min" src="{{asset('assets/img/Icons/minus.png')}}" alt="" width="20">
-                            </h5>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="{{asset('assets/img/about/vis.webp')}}">
-                        </div>
-                        <div class="card-body">
-                            <p>
-                                {{__("home.title about section 2")}}
-                            </p>
-                            <h5>
-                                {{__("home.Our vision")}}
-                                <img class="plus" src="{{asset('assets/img/Icons/plus-w.png')}}" alt="" width="20">
-                                <img class="min" src="{{asset('assets/img/Icons/minus.png')}}" alt="" width="20">
-                            </h5>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="{{asset('assets/img/about/val.webp')}}">
-                        </div>
-                        <div class="card-body">
-                            <p>
-                                {{__("home.title about section 3")}}
-                            </p>
-                            <h5>
-                                {{__("home.rate us")}}
-                                <img class="plus" src="{{asset('assets/img/Icons/plus-w.png')}}" alt="" width="20">
-                                <img class="min" src="{{asset('assets/img/Icons/minus.png')}}" alt="" width="20">
-                            </h5>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!--------------------------------- About Section End ------------------------------------>
     <!--------------------------------- About Department Section Start ------------------------------------>
     <section id="depart">
@@ -186,7 +123,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="depart-img">
-                        <img src="{{asset('assets/img/about/about2.webp')}}" alt="">
+                        <img src="{{asset('assets/img-v2/5.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6">

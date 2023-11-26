@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('section_title' , 'breadcrumb about')
+@section('section_title' , 'breadcrumb about-d')
 @section('breadcrumb')
     <div class="breadcrumb-title">
-        <h4> الاقسام </h4>
+        <h4> {{__("home.Sections")}} </h4>
     </div>
 @stop
 @section('content')
@@ -39,7 +39,7 @@
         <div class="container-fluid">
             <div class="row">
                 @foreach($clinics as $clinic)
-                <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="col-sm-12 col-md-6 col-lg-3">
                     <a href="#">
                         <div class="box-category">
                             <div class="image">
