@@ -123,7 +123,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="depart-img">
-                        <img src="{{asset('assets/img-v2/5.jpg')}}" alt="">
+                        <img src="{{asset('assets/img-v2/4.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6">
