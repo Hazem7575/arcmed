@@ -55,7 +55,7 @@
                 <div class="desktoplogo">
                     <a href="{{route('index')}}" class="main">
                         <div class="logo-content">
-                            <img src="{{asset('assets/img/logo.webp')}}" alt="">
+                            <img src="{{asset('assets/img/logo-w.webp')}}" alt="">
                         </div>
                     </a>
                     <a href="{{route('index')}}" class="sticky">
