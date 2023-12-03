@@ -426,7 +426,7 @@ body {
 .box-category span {
     color: #373333c7;
     font-size: 17px;
-    text-align: center;
+    text-align: justify;
 }
 .info-categories {
     text-align: right;

@@ -125,15 +125,15 @@
     </div>
 </div>
 <div class="social-fixed">
-    <a href="#">
+    <a target="_blank" href="https://x.com/arcrehab?s=21">
         <span>twitter</span>
         <i style="color: #fff;font-size: 26px;" class="fa-brands fa-x-twitter"></i>
     </a>
-    <a href="#">
+    <a target="_blank" href="https://instagram.com/arcrehab.sa?igshid=YzAwZjE1ZTI0Zg==">
         <span>instagram</span>
         <img src="{{asset('assets/img/Icons/instagram.png')}}" alt="">
     </a>
-    <a href="#" >
+    <a target="_blank" href="https://www.snapchat.com/add/arcrehab.sa">
         <span>snapchat</span>
         <img src="{{asset('assets/img/Icons/snapchat.png')}}" alt="">
     </a>
