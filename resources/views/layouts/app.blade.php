@@ -155,13 +155,13 @@
                         <p>{{__("home.email footer")}}</p>
                         <p>{{__("home.Tel footer")}}</p>
                         <div class="social-icons">
-                            <a href="https://x.com/arcrehab?s=21">
+                            <a target="_blank" href="https://x.com/arcrehab?s=21">
                                 <i style="color: #fff;font-size: 26px;" class="fa-brands fa-x-twitter"></i>
                             </a>
-                            <a href="https://instagram.com/arcrehab.sa?igshid=YzAwZjE1ZTI0Zg==">
+                            <a target="_blank" href="https://instagram.com/arcrehab.sa?igshid=YzAwZjE1ZTI0Zg==">
                                 <img src="{{asset('assets/img/Icons/instagram.png')}}" alt="">
                             </a>
-                            <a href="https://www.snapchat.com/add/arcrehab.sa">
+                            <a target="_blank" href="https://www.snapchat.com/add/arcrehab.sa">
                                 <img src="{{asset('assets/img/Icons/snapchat.png')}}" alt="">
                             </a>
 
