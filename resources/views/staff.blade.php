@@ -12,7 +12,7 @@
             <div class="title">
                 <h2>  كادرنا الصحي </h2>
             </div>
-            <div class="row">
+            <div class="row" style="flex-direction: column;justify-content: center;align-items: center;">
                 @foreach($staffs as $staff)
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card">

@@ -27,7 +27,6 @@
             <div class="row">
                 <div class="col-md-6">
                     <h1 class="text-title-about">{{__("home.about us")}}</h1>
-                    <h2 class="text-sub-about">{{__("home.What is physical therapy")}}</h2>
                     <p>
                         {{__("home.title home 2")}}
                     </p>

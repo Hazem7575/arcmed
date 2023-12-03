@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('section_title' , 'breadcrumb about')
+@section('section_title' , 'breadcrumb contact')
 @section('breadcrumb')
     <div class="breadcrumb-title">
         <h4>{{__("home.Connect us")}}</h4>

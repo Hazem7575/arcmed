@@ -155,18 +155,16 @@
                         <p>{{__("home.email footer")}}</p>
                         <p>{{__("home.Tel footer")}}</p>
                         <div class="social-icons">
-                            <a href="#">
+                            <a href="https://x.com/arcrehab?s=21">
                                 <i style="color: #fff;font-size: 26px;" class="fa-brands fa-x-twitter"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://instagram.com/arcrehab.sa?igshid=YzAwZjE1ZTI0Zg==">
                                 <img src="{{asset('assets/img/Icons/instagram.png')}}" alt="">
                             </a>
-                            <a href="#">
+                            <a href="https://www.snapchat.com/add/arcrehab.sa">
                                 <img src="{{asset('assets/img/Icons/snapchat.png')}}" alt="">
                             </a>
-                            <!--<a href="https://arcphysio.sa:2096/" target="_blank">-->
-                            <!--    <img src="{{asset('assets/img/contact/mail.png')}}" alt="">-->
-                            <!--</a>-->
+
                         </div>
                     </div>
                 </div>

@@ -48,7 +48,7 @@
                             <h1>
                                 {{$clinic->name}}
                             </h1>
-                            <span>{{\Illuminate\Support\Str::limit(strip_tags($clinic->description) , 200 , '...')}}</span>
+                            <p>{{\Illuminate\Support\Str::limit(strip_tags($clinic->description) , 200 , '...')}}</p>
                             <a href="javascript:void(0)" data-href="{{route('clinic' , $clinic->id)}}"  data-title="{{$clinic->name}}" class="modal-button btn-read-more">{{__("home.Read more")}}</a>
                         </div>
                     </a>
