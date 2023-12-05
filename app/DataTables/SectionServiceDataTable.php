@@ -73,7 +73,11 @@ class SectionServiceDataTable extends DataTable
      */
     public function query(SectionService $model): QueryBuilder
     {
-        return $model->newQuery()->with(['service:id,' . prefix_lang('name' , 'name' , true)]);
+        return $model->newQuery()
+            ->when(!empty(request()->type) , function ($query) {
+                $query->where('type', request()->type);
+            })
+            ->with(['service:id,' . prefix_lang('name' , 'name' , true)]);
     }
 
     /**

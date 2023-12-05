@@ -2,7 +2,7 @@
 @section('section_title' , 'breadcrumb about-dem')
 @section('breadcrumb')
     <div class="breadcrumb-title">
-        <h4> خدماتنا </h4>
+        <h4> {{$title}} </h4>
     </div>
 @stop
 @section('content')

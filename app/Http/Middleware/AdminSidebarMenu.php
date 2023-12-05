@@ -45,7 +45,8 @@ class AdminSidebarMenu
                             $sub->url(route('admin.section.index' , ['type' => 'slider']),'الاسليدر',['icon' => 'fa fas fa-image', 'active' => (request()->segment(2) == 'section' AND request()->query('type') == 'slider')]);
                             //$sub->url(route('admin.section.index' , ['type' => 'opinions']),'اراء الناس',['icon' => 'fa fas fa-user', 'active' => (request()->segment(2) == 'section' AND request()->query('type') == 'opinions')]);
                             $sub->url(route('admin.services.index'),'الخدمات',['icon' => 'fa fas fa-list', 'active' => request()->segment(2) == 'services']);
-                            $sub->url(route('admin.sectionService.index'),'اقسام الخدمات',['icon' => 'fa fas fa-list', 'active' => request()->segment(2) == 'sectionService']);
+//                            $sub->url(route('admin.sectionService.index',['type' => 1]),'اقسام الخدمات',['icon' => 'fa fas fa-list', 'active' => request()->segment(2) == 'sectionService']);
+                            $sub->url(route('admin.sectionService.index',['type' => 2]),'الاجهزة والادوات',['icon' => 'fa fas fa-list', 'active' => request()->segment(2) == 'sectionService']);
                             $sub->url(route('admin.staff.index'),'طاقم الاطباء',['icon' => 'fa fas fa-user-tie', 'active' => request()->segment(2) == 'staff']);
                             $sub->url(route('admin.clinic.index'),'العيادات',['icon' => 'fa fas fa-list', 'active' => request()->segment(2) == 'clinic']);
                             $sub->url(route('admin.connect.index'),'تواصل معنا',['icon' => 'fa fas fa-envelope', 'active' => request()->segment(2) == 'connect']);

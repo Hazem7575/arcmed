@@ -45,7 +45,7 @@
     <header>
         <div class="wsmobileheader clearfix ">
             <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
-            <span class="smllogo"><img src="{{asset('assets/img/logo.webp')}}?v=1" width="80" alt="" /></span>
+            <span class="smllogo"><img src="{{asset('assets/img/logo-w.webp')}}?v=1" width="80" alt="" /></span>
 
         </div>
         <div class="wsmainfull clearfix">
@@ -72,9 +72,10 @@
                         <li aria-haspopup="true"><a href="{{route('about')}}" class="{{Route::is('about') ? 'active' : ''}}" role="menuitem"> {{__("home.who are we")}} </a>
                         </li>
                         <li aria-haspopup="true"><a href="{{route('department')}}" class="{{Route::is('department') ? 'active' : ''}}">{{__("home.Sections")}}</a></li>
-                        @if(count($services))
-                        <li aria-haspopup="true"><a href="{{route('services')}}" class="{{request()->segment(2) == 'services' ? 'active' : ''}}"> {{__("home.Services")}} </a></li>
-                        @endif
+{{--                        @if(count($services))--}}
+{{--                        <li aria-haspopup="true"><a href="{{route('services')}}" class="{{request()->segment(2) == 'services' ? 'active' : ''}}"> {{__("home.Services")}} </a></li>--}}
+{{--                        @endif--}}
+                        <li aria-haspopup="true"><a href="{{route('devices')}}" class="{{request()->segment(2) == 'devices' ? 'active' : ''}}"> {{__("home.devices")}} </a></li>
                         <li aria-haspopup="true"><a href="{{route('doctors')}}" class="{{Route::is('doctors') ? 'active' : ''}}"> {{__("home.Health staff")}} </a></li>
                         <li aria-haspopup="true"><a href="{{route('education')}}" class="{{Route::is('education') ? 'active' : ''}}">  {{__("home.Health Education")}}  </a></li>
                         <li class="d-mobile">
@@ -144,7 +145,7 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="logo">
-                        <img src="{{asset('assets/img/logo.webp')}}" alt="">
+                        <img src="{{asset('assets/img/logo-w.webp')}}" alt="">
                         <p class="note-web">{{__("home.about title 1")}}</p>
                     </div>
                 </div>

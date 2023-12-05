@@ -14,6 +14,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
         Route::get('/about-us' , 'about')->name('about');
         Route::get('/department' , 'department')->name('department');
         Route::get('/services/{service?}' , 'services')->name('services');
+        Route::get('/devices/{service?}' , 'devices')->name('devices');
         Route::get('/doctors' , 'doctors')->name('doctors');
         Route::get('/gallery' , 'gallery')->name('gallery');
         Route::get('/contact-us' , 'contact')->name('contact');

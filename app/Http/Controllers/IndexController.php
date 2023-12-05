@@ -36,8 +36,15 @@ class IndexController extends Controller
     }
 
     public function services() {
-        $service_all = SectionService::get();
-        return view('services' , compact('service_all'));
+        $service_all = SectionService::where('type' , 1)->get();
+        $title = 'خدماتنا';
+        return view('services' , compact('service_all' , 'title'));
+    }
+
+    public function devices() {
+        $service_all = SectionService::where('type' , 2)->get();
+        $title = 'الاجهزة والادوات';
+        return view('services' , compact('service_all' , 'title'));
     }
 
     public function doctors() {

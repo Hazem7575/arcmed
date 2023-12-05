@@ -21,7 +21,11 @@ class SectionServiceController extends Controller
     public function index(SectionServiceDataTable $dataTable)
     {
         $this->CheckPermission('sectionService.index');
-        return $dataTable->render('admin.services.sections.index');
+        $title = 'اقسام الخدمات';
+        if(\request()->type == 2) {
+            $title = 'الاجهزة والادوات';
+        }
+        return $dataTable->render('admin.services.sections.index'  , compact('title'));
     }
 
     /**
@@ -32,8 +36,12 @@ class SectionServiceController extends Controller
     public function create()
     {
         $this->CheckPermission('sectionService.create');
+        $title = 'اضافة خدمة جديدة';
+        if(\request()->type == 2) {
+            $title = 'اضافة جهاز جديد';
+        }
         $services = Service::where('status' , 1)->select(prefix_lang('name' , 'name'), 'id')->pluck('name' , 'id');
-        return view('admin.services.sections.create' , compact('services'));
+        return view('admin.services.sections.create' , compact('services'  , 'title'));
     }
 
     /**
@@ -54,6 +62,7 @@ class SectionServiceController extends Controller
             'description_ar' => 'required',
             'description_en' => 'nullable',
             'order' => 'nullable',
+            'type' => 'nullable',
             'image' => 'file|mimes:' . implode(',' , config('setting.files_type')),
         ]);
 
