@@ -132,7 +132,23 @@
             <div class="title-head">
                 <h1>{{__('home.Our health care services')}}</h1>
             </div>
-            <div class="slider">
+            <style>
+                .mt-slider .box-category .image img {
+                    width: 150px;
+                    height: 150px;
+                    text-align: center;
+                    margin: auto;
+                    display: block;
+                    border-radius: 15px;
+                }
+                #section-services .box-category .image {
+                    height: 150px !important;
+                }
+                .mt-slider .box-category h1 {
+                    text-align: center;
+                }
+            </style>
+            <div class="slider mt-slider">
                 <div uk-slider>
                     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
 
