@@ -44,7 +44,8 @@ class IndexController extends Controller
     public function devices() {
         $service_all = SectionService::where('type' , 2)->get();
         $title = 'الاجهزة والادوات';
-        return view('services' , compact('service_all' , 'title'));
+        $type = true;
+        return view('services' , compact('service_all' , 'title' , 'type'));
     }
 
     public function doctors() {

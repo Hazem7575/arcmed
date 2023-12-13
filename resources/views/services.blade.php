@@ -6,6 +6,24 @@
     </div>
 @stop
 @section('content')
+    @if(isset($type))
+    <style>
+        .box-category .image img {
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            margin: auto;
+            display: block;
+            border-radius: 15px;
+        }
+        #section-services .box-category .image {
+            height: 150px;
+        }
+        .box-category h1 {
+            text-align: center;
+        }
+    </style>
+    @endif
     <section id="section-services">
         <div class="container-fluid">
             <div class="row">
