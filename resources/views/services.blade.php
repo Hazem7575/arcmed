@@ -30,7 +30,7 @@
                 @foreach($service_all as $section)
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <a href="javascript:void(0)">
-                        <div class="box-category">
+                        <div class="box-category" style="height: 300px;justify-content: center;">
                             <div class="image">
                                 <img src="{{asset($section->image)}}" alt="">
                             </div>
