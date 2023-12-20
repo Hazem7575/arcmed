@@ -155,12 +155,11 @@
                         <ul class="uk-slider-items uk-child-width-1-4@s uk-grid">
                             @foreach($services as $service)
                             <li>
-                                <div class="box-category">
+                                <div class="box-category" style="height: 300px;">
                                     <div class="image">
                                         <img src="{{asset($service->image)}}" alt="">
                                     </div>
                                     <h1>{{$service->name}}</h1>
-                                    <span>{{$service->description}}</span>
                                 </div>
                             </li>
                             @endforeach
