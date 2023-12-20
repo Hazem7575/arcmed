@@ -155,7 +155,7 @@
                         <ul class="uk-slider-items uk-child-width-1-5@s uk-grid">
                             @foreach($services as $service)
                             <li>
-                                <div class="box-category" style="height: 300px;">
+                                <div class="box-category" style="height: 300px;justify-content: center;">
                                     <div class="image">
                                         <img src="{{asset($service->image)}}" alt="">
                                     </div>
