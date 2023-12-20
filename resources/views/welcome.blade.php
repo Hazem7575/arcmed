@@ -152,7 +152,7 @@
                 <div uk-slider>
                     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
 
-                        <ul class="uk-slider-items uk-child-width-1-4@s uk-grid">
+                        <ul class="uk-slider-items uk-child-width-1-5@s uk-grid">
                             @foreach($services as $service)
                             <li>
                                 <div class="box-category" style="height: 300px;">
