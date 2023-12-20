@@ -159,7 +159,8 @@
                                     <div class="image">
                                         <img src="{{asset($service->image)}}" alt="">
                                     </div>
-                                    <h1>{{$service->name}}</h1>
+                                    <h1>{{$service->name_ar}}</h1>
+                                    <h1>{{$service->name_en}}</h1>
                                 </div>
                             </li>
                             @endforeach

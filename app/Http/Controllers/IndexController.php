@@ -21,7 +21,7 @@ class IndexController extends Controller
     public function index() {
         $sliders = Section::where('key' , 'slider')->select('image' , 'id' , prefix_lang('text->title' , 'title') ,  prefix_lang('text->content' , 'content'))->get();
         $services = SectionService::where('status' , 1)->where('type' , 2)->where('public' , 1)->select('image' , 'id' , prefix_lang('name' , 'name') ,  prefix_lang('description' , 'description'))->get();
-        $clinics = Clinics::where('status' , 1)->select('id' , 'image' , prefix_lang('description' , 'description') , prefix_lang('name' , 'name'))->orderBy('order')->take(6)->get();
+        $clinics = Clinics::where('status' , 1)->select('id' , 'image' , prefix_lang('description' , 'description') , 'name_ar' , 'name_en')->orderBy('order')->take(6)->get();
         return view('welcome' , compact('sliders' , 'services' , 'clinics'));
     }
 
