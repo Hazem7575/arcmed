@@ -35,7 +35,7 @@
                                 <img src="{{asset($section->image)}}" alt="">
                             </div>
                             <h1>{{ $section->{prefix_lang('name' , 'name' , true)} }}</h1>
-                            <span>{{ $section->{prefix_lang('description' , 'description' , true)} }}</span>
+{{--                            <span>{{ $section->{prefix_lang('description' , 'description' , true)} }}</span>--}}
                         </div>
                     </a>
                 </div>
