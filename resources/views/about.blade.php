@@ -13,10 +13,10 @@
                 <div class="col-sm-12 col-md-6 col-lg-6">
                     <div class="title">
                         <h2> {{__("home.about us")}} </h2>
-                        <h3> {{__("home.Who we are and where we started")}} </h3>
-                        <p>
+                        <!--<h3> {{__("home.Who we are and where we started")}} </h3>-->
+                        <span style="text-align: justify">
                             {{__("home.about page title")}}
-                        </p>
+                        </span>
                     </div>
                     <ul>
                         <li>
@@ -130,7 +130,8 @@
                     <div class="depart-content">
                         <div class="title">
                             <h2>  {{__("home.What is the specialty of physical therapy?")}} </h2>
-                            <h3>  {{__("home.A general idea about the specialty of physical therapy and rehabilitation")}}</h3>
+                            <br/>
+                            <!--<h3>  {{__("home.A general idea about the specialty of physical therapy and rehabilitation")}}</h3>-->
                             <p>
                                 {{__("home.section title about 5")}}
                             </p>
@@ -145,9 +146,7 @@
     @if($staffs->count() > 0)
     <section id="staff">
         <div class="container-fluid">
-            <div class="title">
-                <h2>  {{__("home.Our health staff")}} </h2>
-            </div>
+
             <div class="row">
                 @foreach($staffs as $staff)
                 <div class="col-sm-12 col-md-6 col-lg-3">

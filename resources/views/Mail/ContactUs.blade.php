@@ -5,7 +5,6 @@
         <br>
         <ul>
             <li>الاسم : {{$data['name']}}</li>
-            <li>البريد : {{$data['email']}}</li>
             <li>الهاتف : {{$data['phone']}}</li>
             <li>الملاحظة : {{$data['specialization']}}</li>
         </ul>

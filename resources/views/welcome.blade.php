@@ -1,4 +1,30 @@
 @extends('layouts.app')
+@section('style')
+    <style>
+        .arrow-left {
+            position: absolute;
+            top: 50%;
+            left: 45px;
+            z-index: 999999;
+            font-size: 42px;
+            color: #fff;
+            animation: arrow 1s linear infinite ;
+            cursor: pointer;
+        }
+        @keyframes arrow {
+            0% {
+                left: 45px;
+            }
+            50% {
+                left: 90px;
+            }
+            100% {
+                left: 45px;
+            }
+
+        }
+    </style>
+@stop
 @section('content')
     <section class="banner-section">
         <div class="banner-carousel owl-carousel owl-theme">
@@ -45,7 +71,10 @@
         <div class="container-fluid categories-about">
             <div class="row">
                 <div class="col-md-8 background-image-categories">
-                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true" uk-slider="clsActivated: uk-transition-active">
+                    <div class="arrow-left">
+                      <i class="fa fa-arrow-left"></i>
+                    </div>
+                    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"  uk-slider="clsActivated: uk-transition-active">
                         <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid">
                             @foreach($clinics as $clinic)
                             <li>
@@ -59,6 +88,7 @@
                                 </div>
                             </li>
                             @endforeach
+
                         </ul>
                     </div>
                 </div>

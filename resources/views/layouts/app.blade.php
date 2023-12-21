@@ -174,7 +174,7 @@
                         <h1>{{__("home.For comments and complaints")}}</h1>
                         <a href="{{route('compain')}}" class="btn-read-more">{{__("home.click here")}}</a>
                         <br>
-                        <a href="https://arcphysio.sa:2096/" target="_blank" class="btn-read-more ed">بريد الموظفين</a>
+                        <a href="https://arcrehab.sa:2096/" target="_blank" class="btn-read-more ed">بريد الموظفين</a>
                     </div>
                 </div>
             </div>

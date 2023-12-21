@@ -2,7 +2,7 @@
 @section('section_title' , 'breadcrumb about staff')
 @section('breadcrumb')
     <div class="breadcrumb-title">
-        <h4>طاقم الاطباء</h4>
+        <h4></h4>
     </div>
 @stop
 @section('content')
@@ -10,7 +10,7 @@
     <section id="staff" class="inside">
         <div class="container-fluid">
             <div class="title">
-                <h2>  كادرنا الصحي </h2>
+                <h2>   </h2>
             </div>
             <div class="row" style="flex-direction: column;justify-content: center;align-items: center;">
                 @foreach($staffs as $staff)

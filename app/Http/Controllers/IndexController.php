@@ -86,7 +86,6 @@ class IndexController extends Controller
         $validate = $request->validate([
             'name' => 'required',
             'phone' => 'required',
-            'email' => 'required',
             'content' => 'required',
             'specialization' => 'required',
         ]);
