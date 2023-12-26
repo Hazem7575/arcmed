@@ -23,12 +23,9 @@
                                     <div class="input-group">
                                         <i class="fa-solid fa-chevron-down"></i>
                                         <select class="form-control custom-select" name="specialization" id="inputGroupSelect01">
-                                            <option selected>
-                                                {{__("home.note")}}
-                                            </option>
+
                                             <option value="أستفسار">أستفسار</option>
                                             <option value="مشكلة">مشكلة</option>
-                                            <option value="ملاحظة">ملاحظة</option>
                                             <option value="أخرى">أخرى</option>
                                         </select>
                                     </div>
