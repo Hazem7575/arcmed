@@ -37,7 +37,9 @@
                     <div class="about-img">
                         <img src="{{asset('/assets/img-v2/1.webp')}}">
                     </div>
+                    <a href="https://youtu.be/q9wIMM4CTdQ?si=EBwb-tExyxbGBnZv">
                     <img class="about-icon" src="{{asset('assets/img/Icons/youtube.png')}}">
+                    </a>
                 </div>
             </div>
 

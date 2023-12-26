@@ -29,6 +29,7 @@
     @if(LaravelLocalization::setLocale() == 'en')
         <link rel="stylesheet" href="{{asset('assets/css/style_en.css')}}?v={{$assets}}">
     @endif
+
     @yield('style')
     <style>
         .lang-btn ,  .b-lang-mobile {
