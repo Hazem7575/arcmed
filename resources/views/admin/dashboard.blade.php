@@ -197,6 +197,25 @@
                     </a>
                     <!--end::Statistics Widget 5-->
                 </div>
+                <div class="col-xl-3">
+                    <!--begin::Statistics Widget 5-->
+                    <a href="javascript:void(0)" class="card bg-warning hoverable card-xl-stretch mb-xl-8" style="background:#201077 !important">
+                        <!--begin::Body-->
+                        <div class="card-body card-h">
+                            <!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
+                            <span class="svg-icon svg-icon-white svg-icon-3x ms-n1">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19 15C21.2091 15 23 16.7909 23 19V21H21M16 10.874C17.7252 10.4299 19 8.86383 19 6.99999C19 5.13615 17.7252 3.57005 16 3.12601M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7ZM5 15H13C15.2091 15 17 16.7909 17 19V21H1V19C1 16.7909 2.79086 15 5 15Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            </span>
+                            <!--end::Svg Icon-->
+                            <div class="text-l">
+                                <div class="text-white fw-bolder fs-2 mb-2 mt-5" style="font-size: 29px !important;">{{\App\Models\Visit::count()}}</div>
+                                <div class="fw-bold text-white">عدد الزوار</div>
+                            </div>
+                        </div>
+                        <!--end::Body-->
+                    </a>
+                    <!--end::Statistics Widget 5-->
+                </div>
             </div>
             <!--end::Row-->
 

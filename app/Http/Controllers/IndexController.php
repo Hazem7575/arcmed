@@ -11,6 +11,7 @@ use App\Models\Section;
 use App\Models\SectionService;
 use App\Models\Service;
 use App\Models\Staff;
+use App\Models\Visit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -19,6 +20,9 @@ use Inertia\Inertia;
 class IndexController extends Controller
 {
     public function index() {
+
+
+
         $sliders = Section::where('key' , 'slider')->select('image' , 'id' , prefix_lang('text->title' , 'title') ,  prefix_lang('text->content' , 'content'))->get();
         $services = SectionService::where('status' , 1)->where('type' , 2)->where('public' , 1)->select('image' , 'id' , 'name_ar' , 'name_en' ,  prefix_lang('description' , 'description'))->get();
         $clinics = Clinics::where('status' , 1)->select('id' , 'image' , prefix_lang('description' , 'description') , prefix_lang('name' , 'name'))->orderBy('order')->take(6)->get();
