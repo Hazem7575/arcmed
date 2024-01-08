@@ -23,6 +23,30 @@
             }
 
         }
+        @media (max-width: 600px) {
+            .arrow-left {
+                position: absolute;
+                top: 50%;
+                left: 18px;
+                z-index: 999999;
+                font-size: 21px;
+                color: #30a5ff;
+                animation: arrow 1s linear infinite;
+                cursor: pointer;
+            }
+            @keyframes arrow {
+                0% {
+                    left: 10px;
+                }
+                50% {
+                    left: 40px;
+                }
+                100% {
+                    left: 10px;
+                }
+
+            }
+        }
     </style>
 @stop
 @section('content')
