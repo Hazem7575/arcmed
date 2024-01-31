@@ -9,7 +9,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <meta name="description" content="مركز علاج طبيعي في المملكة العربية السعودية" />
-    <meta name="keywords" content="علاج طبيعي , الالم الظهر , الالم المفاصل , اجهزة علاج حديثه " />
+    <meta name="keywords" content="علاج طبيعي الرياض,مركز للعلاج الطبيعي,علاج الم اسفل الظهر,تدليك ليمفاوي,الم اسفل الظهر,علاج الم اسفل الظهر,طق ابهر,مساج علاجي الرياض,علاج العمود الفقري,المساج اللمفاوي,مركز تاهيل اطفال,الم اسفل الظهر فوق المؤخرة,مركز العمود الفقري,مساج الابهر الرياض,علاج الابهر الرياض,التشيكي للعلاج الطبيعي,تأهيل طبي الرياض,تأهيل طبي,علاج طبيعي الرياض,علاج طبيعي,العلاج الطبيعي,علاج وظيفي الرياض,علاج وظيفي,العلاج الوظيفي,الرياض,رباط صليبي ,الرباط الصليبي ,شد عضلي ,الام العظام,الام الرقبة ,الام الظهر , إصابات رياضية,عرق النسا,متلازمة الألم الليفي العضلي,متلازمة النفق الرسغي,اضطراب طيف التوحد" />
     <meta property="og:locale" content="ar-sa" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="علاج طبيعي , الالم الظهر , الالم المفاصل , اجهزة علاج حديثه" />
@@ -36,8 +36,14 @@
             display:none !important;
         }
     </style>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NVDHRWW6');</script>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVDHRWW6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 @include('sweetalert::alert')
 <div class="loading-screen" id="loading-screen">
     <div class="loader"></div>
