@@ -243,6 +243,7 @@
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
+    z-index: 99999999999999999;
 }
 .btn-whatsapp-pulse svg {
     z-index: 999;
