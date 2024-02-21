@@ -22,7 +22,7 @@ class AdminLoginController extends Controller
 
         $check = User::where('name' , $request->email)->where('status' , 1)->first();
         if(!$check) {
-            return response()->json(['msg' => 'معلومات الاتصال غير صحييحه'] , 403);
+            return response()->json(['msg' => 'معلومات الاتصال غير صحييحه2'] , 403);
         }
 
         if(Hash::check($request->password , $check->password)) {

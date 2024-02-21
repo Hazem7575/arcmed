@@ -27,20 +27,20 @@
     <section id="section-services">
         <div class="container-fluid">
             <div class="row">
-                @foreach($service_all as $section)
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                    <a href="javascript:void(0)">
-                        <div class="box-category" style="height: 300px;justify-content: center;">
-                            <div class="image">
-                                <img src="{{asset($section->image)}}" alt="">
-                            </div>
-                            <h1>{{ $section->name_ar }}</h1>
-                            <h1>{{ $section->name_en }}</h1>
-{{--                            <span>{{ $section->{prefix_lang('description' , 'description' , true)} }}</span>--}}
-                        </div>
-                    </a>
-                </div>
-                @endforeach
+<!--                @foreach($service_all as $section)-->
+<!--                <div class="col-sm-12 col-md-6 col-lg-3">-->
+<!--                    <a href="javascript:void(0)">-->
+<!--                        <div class="box-category" style="height: 300px;justify-content: center;">-->
+<!--                            <div class="image">-->
+<!--                                <img src="{{asset($section->image)}}" alt="">-->
+<!--                            </div>-->
+<!--                            <h1>{{ $section->name_ar }}</h1>-->
+<!--                            <h1>{{ $section->name_en }}</h1>-->
+<!--{{--                            <span>{{ $section->{prefix_lang('description' , 'description' , true)} }}</span>--}}-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                @endforeach-->
             </div>
         </div>
     </section>

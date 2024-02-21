@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Cache;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 function ExtandController() {
@@ -32,4 +33,20 @@ function prefix_lang($name , $as , $for_as = false) {
         return $name.'_'.$lang;
     }
     return $name.'_'.$lang.' as '. $as;
+}
+function setting($key,$value = null) {
+    $key_setting = 'setting_'.$key;
+    if(!Cache::has($key_setting)) {
+        $data_website = \App\Models\Setting::where('key' , $key)->first();
+        Cache::put('setting_'.$key , $data_website);
+    }
+    $website = Cache::get('setting_'.$key);
+
+    if($website)
+        if(is_null($value))
+            return $website->data;
+        else
+            return $website->data->{$value} ?? null;
+    else
+        return null;
 }

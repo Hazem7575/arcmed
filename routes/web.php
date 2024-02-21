@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\AdminLoginController;
+use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LanguageController;
 use Illuminate\Foundation\Application;
@@ -28,7 +29,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
 });
 Route::get('/admin/login', [AdminLoginController::class , 'index']);
 Route::post('/admin/auth', [AdminLoginController::class , 'auth']);
+
+
+
 Route::get('/lang-{lang}.js', [LanguageController::class , 'index']);
+
 Route::get('/{any}', [IndexController::class , 'NotFound'])->where('any', '.*');
 
 

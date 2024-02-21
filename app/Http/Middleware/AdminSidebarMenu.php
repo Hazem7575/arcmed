@@ -57,6 +57,7 @@ class AdminSidebarMenu
                 )->order(3);
             }
             $menu->url(route('admin.lang.index'), 'اللغات', ['icon' => 'fa fas fa-language', 'active' => request()->segment(2) == 'lang'])->order(4);
+            $menu->url(route('admin.setting.index'), 'اعدادت الموقع', ['icon' => 'fa fas fa-cog', 'active' => request()->segment(2) == 'setting'])->order(4);
         });
 
         return $next($request);

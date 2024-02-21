@@ -11,6 +11,7 @@ use App\Http\Controllers\admin\RolesController;
 use App\Http\Controllers\admin\SectionController;
 use App\Http\Controllers\admin\SectionServiceController;
 use App\Http\Controllers\admin\ServiceController;
+use App\Http\Controllers\admin\SettingController;
 use App\Http\Controllers\admin\StaffController;
 use App\Http\Controllers\admin\UserController;
 use Illuminate\Support\Facades\Route;
@@ -30,3 +31,7 @@ Route::resource('connect' , ConnectUsController::class)->only('index' , 'destroy
 Route::resource('compain' , CompainController::class)->only('index' , 'destroy' , 'show');
 Route::resource('clinic' , ClinicsController::class);
 Route::resource('faq' , FaqController::class);
+Route::controller(SettingController::class)->group(function () {
+    Route::get('/setting' , 'index')->name('setting.index');
+    Route::post('/setting-update' , 'update')->name('setting.update');
+});
