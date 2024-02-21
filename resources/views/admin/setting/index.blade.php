@@ -21,6 +21,13 @@
                     </div>
                 </div>
 
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {!! Form::label('setting[app][phone]' , 'phone' , ['class' => 'col-sm-8 col-form-label']) !!}
+                        {{Form::text('setting[app][phone]',setting('app' , 'phone') , ['class' => 'form-control'  , 'style' => 'width:100%'])}}
+                    </div>
+                </div>
+
 
                 <div class="clearfix"></div>
 
