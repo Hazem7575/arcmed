@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <meta name="description" content="{{setting('app' , 'description')}}" />
-    <meta name="keywords" content="{{setting('app' , 'keywords')}}" />
+    <meta name="description" content="@yield('description')" />
+    <meta name="keywords" content="@yield('keywords')" />
     <meta property="og:locale" content="ar-sa" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="علاج طبيعي , الالم الظهر , الالم المفاصل , اجهزة علاج حديثه" />

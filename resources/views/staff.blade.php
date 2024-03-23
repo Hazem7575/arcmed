@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('section_title' , 'breadcrumb about staff')
+@section('keywords' , setting('app' , 'keywords_doctors'))
+@section('description' , setting('app' , 'description_doctors'))
 @section('breadcrumb')
     <div class="breadcrumb-title">
         <h4></h4>

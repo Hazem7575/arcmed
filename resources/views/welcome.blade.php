@@ -1,4 +1,6 @@
 @extends('layouts.app')
+@section('keywords' , setting('app' , 'keywords'))
+@section('description' , setting('app' , 'description'))
 @section('style')
     <style>
         .arrow-left {

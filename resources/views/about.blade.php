@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('section_title' , 'breadcrumb about-as')
+@section('keywords' , setting('app' , 'keywords_us'))
+@section('description' , setting('app' , 'description_us'))
 @section('breadcrumb')
     <div class="breadcrumb-title">
         <h4> {{__("home.who are we")}} </h4>

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('section_title' , 'breadcrumb about Education')
+@section('keywords' , setting('app' , 'keywords_education'))
+@section('description' , setting('app' , 'description_education'))
 @section('breadcrumb')
     <div class="breadcrumb-title">
         <h4> {{__("home.Health Education")}} </h4>
@@ -17,7 +19,7 @@
     </style>
     <section id="faq">
         <div class="container-fluid">
-           
+
             <div class="row">
 
                 <div class="col-md-12">
