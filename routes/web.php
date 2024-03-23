@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
+Route::get('/login' , function(){
+    return redirect('/admin/login');
+});
+
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function(){
     Route::controller(IndexController::class)->group(function () {
         Route::get('/' , 'index')->name('index');
